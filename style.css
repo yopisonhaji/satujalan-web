@@ -96,7 +96,9 @@ img {
 /* Performance: Use GPU layers for animated elements */
 .marquee-content,
 .spinner,
-.tech-circle {
+.tech-circle,
+#spline-container,
+.aesthetic-bg {
     will-change: transform;
 }
 

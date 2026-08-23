@@ -1,16 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Loader - Dinamis namun sangat cepat agar LCP di bawah 1 detik
-    const loader = document.getElementById('loader');
-    if (loader) {
-        // Gunakan DOMContentLoaded + sedikit delay agar LCP langsung terdeteksi Google
-        setTimeout(() => {
-            loader.style.opacity = '0';
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        }, 100);
-    }
 
     // --- THEME TOGGLE (Dark/Light) ---
     const themeToggle = document.getElementById('theme-toggle');

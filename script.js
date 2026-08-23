@@ -112,32 +112,43 @@ document.addEventListener('DOMContentLoaded', () => {
         threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries) => {
+    // --- SCROLL ANIMATIONS (Dinamis & Ultra-Ringan) ---
+    const revealOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const scrollObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-up');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('is-revealed');
+                scrollObserver.unobserve(entry.target); // Lepas memori setelah animasi selesai
             }
         });
-    }, observerOptions);
+    }, revealOptions);
 
-    // Elements to animate
-    document.querySelectorAll('.service-card, .feature-box').forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
+    // Auto-attach animation classes to elements dynamically to keep HTML clean
+    const elementsToAnimate = [
+        { selector: 'section h2.section-title', style: 'sr-up' },
+        { selector: 'section > p.center', style: 'sr-up' },
+        { selector: '.service-card', style: 'sr-up' },
+        { selector: '.feature-box', style: 'sr-up' },
+        { selector: '.pricing-card', style: 'sr-zoom' },
+        { selector: '.portfolio-item', style: 'sr-zoom' },
+        { selector: '.coverage-grid > div', style: 'sr-left' },
+        { selector: '.contact-options a', style: 'sr-right' }
+    ];
+
+    elementsToAnimate.forEach(group => {
+        document.querySelectorAll(group.selector).forEach((el, index) => {
+            el.classList.add('scroll-reveal', group.style);
+            // Optional staggered delay based on index for siblings
+            if(el.parentElement.children.length > 1) {
+                el.style.transitionDelay = `${(index % 4) * 0.1}s`;
+            }
+            scrollObserver.observe(el);
+        });
     });
-
-    // CSS class handling for animations
-    const style = document.createElement('style');
-    style.innerHTML = `
-        .animate-up {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
-        }
-    `;
-    document.head.appendChild(style);
 
     // --- MODAL & BOOKING LOGIC ---
 

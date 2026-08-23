@@ -1766,10 +1766,22 @@ footer {
     0% {
         transform: translateX(0);
     }
-
     100% {
         transform: translateX(-50%);
     }
+}
+
+@keyframes scrollLogosReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.marquee-reverse {
+    animation: scrollLogosReverse 40s linear infinite !important;
 }
 
 /* GPU acceleration for marquee - reduces CPU painting */
@@ -1785,6 +1797,10 @@ footer {
 @media (max-width: 768px) {
     .marquee-content {
         gap: 2rem;
+        animation-duration: 15s !important; /* Jauh lebih cepat di mobile sesuai permintaan */
+    }
+    .marquee-reverse {
+        animation-duration: 15s !important;
     }
 
     .logo-item {

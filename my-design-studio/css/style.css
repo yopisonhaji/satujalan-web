@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #030712; /* Tailwind gray-950 */
+    color: #f3f4f6; /* Tailwind gray-100 */
+}
+
+/* Custom Scrollbar for sleek SaaS look */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #374151; /* gray-700 */
+    border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #4b5563; /* gray-600 */
+}
+
+/* Glassmorphism utilities */
+.glass-panel {
+    background: rgba(17, 24, 39, 0.6); /* gray-900 with opacity */
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Pattern background for canvas area */
+.bg-pattern {
+    background-image: radial-gradient(#374151 1px, transparent 1px);
+    background-size: 24px 24px;
+}
+
+/* Ensure canvas scales nicely using CSS transform if needed, though handled by JS */
+.canvas-container {
+    margin: 0 auto;
+}

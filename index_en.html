@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SatuJalan - Laptop, Mobile & Web Development Solutions</title>
+    <link rel="icon" href="favicon.webp" type="image/webp">
+    <link rel="apple-touch-icon" href="favicon.webp">
+    <meta name="description"
+        content="SERVICES Servis Panggilan 24 Jam untuk Laptop, HP, & IT Support di Jabodetabek. Jasa Pembuatan Website & Aplikasi Profesional. Cepat, Bergaransi, & Transparan.">
+    <meta name="keywords"
+        content="on-site laptop repair, phone repair, computer service jabodetabek, website development, web developer jakarta, data recovery, windows reinstall">
+    <meta name="author" content="SatuJalan IT Solutions">
+
+    <meta name="google-site-verification" content="y_iXlREcWOqyj8nvtsi_6LgrHJQZn-HQqcW_Hrep728" />
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "SatuJalan IT Solutions",
+      "url": "https://www.satujalan.id",
+      "logo": "https://www.satujalan.id/logo.webp"
+    }
+    </script>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.satujalan.id/index_en.html">
+    <meta property="og:title" content="SatuJalan - Solusi IT & Servis Elektronik 24 Jam">
+    <meta property="og:description"
+        content="Need on-site laptop/phone repair? SatuJalan is the solution. Experienced technicians ready to come to your location.">
+    <meta property="og:image" content="https://www.satujalan.id/logo.webp">
+
+    <!-- DNS prefetch & preconnect untuk resource eksternal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <!-- Preload LCP-critical assets -->
+    <link rel="preload" href="logo.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style">
+
+    <!-- ============================================================
+         CRITICAL CSS - Inline untuk zero render blocking & zero CLS
+         ============================================================ -->
+    <style>
+        /* Variables */
+        :root{--bg-dark:#0a0e17;--bg-card:rgba(31,41,55,0.7);--primary:#FF6B00;--secondary:#10B981;--accent-blue:#2563EB;--urgent-red:#DC2626;--text-main:#ffffff;--text-muted:#9ca3af;--accent-glow:rgba(255,107,0,0.3);--grad-main:linear-gradient(135deg,#FF6B00 0%,#EA580C 100%);--grad-green:linear-gradient(135deg,#10B981 0%,#059669 100%);--grad-text:linear-gradient(to right,#ffffff,#FF6B00);--container-padding:2rem;--section-gap:6rem;--glass-border:1px solid rgba(255,255,255,0.1);--radius-sm:8px;--radius-md:16px;--radius-lg:24px;--accent-orange:#FF6B00;--grad-accent:linear-gradient(135deg,#FF6B00 0%,#c2410c 100%)}
+        /* ============================================================
+           LIGHT THEME - Comprehensive overrides
+           ============================================================ */
+        [data-theme="light"]{
+          --bg-dark:#f1f5f9;--bg-card:rgba(255,255,255,0.9);
+          --text-main:#0f172a;--text-muted:#475569;
+          --glass-border:1px solid rgba(0,0,0,0.08);
+          --accent-glow:rgba(255,107,0,0.12);
+        }
+        [data-theme="light"] body{background:#f1f5f9 !important;color:#0f172a !important}
+        [data-theme="light"] h1,[data-theme="light"] h2,[data-theme="light"] h3,[data-theme="light"] h4,[data-theme="light"] h5,[data-theme="light"] h6{color:#0f172a}
+        [data-theme="light"] p{color:#334155}
+        [data-theme="light"] .logo-text{color:#0f172a !important}
+        [data-theme="light"] .highlight{color:#059669 !important;text-shadow:none}
+        [data-theme="light"] .highlight-blue{color:#2563EB !important;text-shadow:none}
+        [data-theme="light"] .highlight-purple{color:#7C3AED !important;text-shadow:none}
+        [data-theme="light"] .highlight-orange{color:#FF6B00 !important}
+        /* Navbar */
+        [data-theme="light"] .navbar{background:rgba(241,245,249,.0)}
+        [data-theme="light"] .navbar.scrolled{background:rgba(241,245,249,.92) !important;backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .nav-link{color:#475569 !important}
+        [data-theme="light"] .nav-link:hover,[data-theme="light"] .nav-link.active{color:#0f172a !important}
+        [data-theme="light"] .nav-link::after{background:var(--grad-main)}
+        [data-theme="light"] .bar{background-color:#0f172a !important}
+        [data-theme="light"] .lang-btn{background:rgba(0,0,0,.06) !important;border:1px solid rgba(0,0,0,.15) !important;color:#0f172a !important}
+        [data-theme="light"] .lang-btn:hover{background:var(--primary) !important;color:#fff !important}
+        [data-theme="light"] .lang-toggle-btn{background:rgba(0,0,0,.06) !important;border:1px solid rgba(0,0,0,.12) !important;color:#0f172a !important}
+        [data-theme="light"] .lang-toggle-btn:hover{background:var(--primary) !important;color:#fff !important;border-color:var(--primary) !important}
+        [data-theme="light"] .lang-dropdown-menu{background:rgba(255,255,255,.98) !important;border:1px solid rgba(0,0,0,.1) !important;box-shadow:0 10px 30px rgba(0,0,0,.1)}
+        [data-theme="light"] .lang-option{color:#475569}
+        [data-theme="light"] .lang-option:hover{background:rgba(0,0,0,.04);color:#0f172a}
+        [data-theme="light"] .lang-option.active{background:rgba(255,107,0,.1);color:var(--primary)}
+        [data-theme="light"] .nav-btn-mobile{color:#fff !important}
+        /* Hero carousel */
+        [data-theme="light"] .hero-carousel{background:#f1f5f9 !important}
+        /* Sections */
+        [data-theme="light"] section.services,[data-theme="light"] .section-dark{background:#f1f5f9 !important}
+        [data-theme="light"] .glass-card{background:rgba(255,255,255,.92) !important;border:1px solid rgba(0,0,0,.06) !important;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+        [data-theme="light"] .glass-card::before{background:var(--grad-main)}
+        [data-theme="light"] .glass-card h3{color:#0f172a}
+        [data-theme="light"] .glass-card p{color:#475569}
+        [data-theme="light"] .card-list li{color:#334155}
+        [data-theme="light"] .card-list i{color:var(--primary)}
+        /* Buttons */
+        [data-theme="light"] .btn-primary{color:#fff !important}
+        [data-theme="light"] .btn-secondary{background:rgba(0,0,0,.04) !important;color:#0f172a !important;border:1px solid rgba(0,0,0,.12) !important}
+        [data-theme="light"] .btn-secondary:hover{background:rgba(0,0,0,.08) !important;border-color:var(--primary) !important}
+        [data-theme="light"] .btn-accent{color:#fff !important}
+        /* Form elements */
+        [data-theme="light"] input,[data-theme="light"] textarea,[data-theme="light"] select{background:#fff !important;color:#0f172a !important;border:1px solid rgba(0,0,0,.15) !important}
+        [data-theme="light"] input:focus,[data-theme="light"] textarea:focus,[data-theme="light"] select:focus{border-color:var(--primary) !important;box-shadow:0 0 0 3px rgba(255,107,0,.1)}
+        [data-theme="light"] input::placeholder,[data-theme="light"] textarea::placeholder{color:#94a3b8 !important}
+        [data-theme="light"] .form-group label{color:#334155}
+        [data-theme="light"] .radio-group,[data-theme="light"] .radio-group label{color:#334155 !important}
+        /* Footer */
+        [data-theme="light"] footer{background:#e2e8f0 !important;border-top:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .footer-content h4{color:#0f172a}
+        [data-theme="light"] .footer-content p,[data-theme="light"] .footer-links a{color:#475569}
+        [data-theme="light"] .footer-links a:hover{color:var(--primary)}
+        [data-theme="light"] .footer-bottom{border-top:1px solid rgba(0,0,0,.08);color:rgba(0,0,0,.45)}
+        [data-theme="light"] .social-links a{background:rgba(0,0,0,.06);color:#475569}
+        [data-theme="light"] .social-links a:hover{background:var(--primary);color:#fff}
+        /* Coverage */
+        [data-theme="light"] .coverage-wrapper{background:#fff !important;border:1px solid rgba(0,0,0,.08);box-shadow:0 4px 20px rgba(0,0,0,.04)}
+        [data-theme="light"] .coverage-text h2{color:#0f172a}
+        [data-theme="light"] .coverage-text p{color:#64748b}
+        [data-theme="light"] .tag{background:rgba(0,0,0,.03);border:1px solid rgba(0,0,0,.08);color:#475569}
+        [data-theme="light"] .tag:hover{background:rgba(255,107,0,.08);border-color:var(--primary);color:#0f172a}
+        [data-theme="light"] .pricing-info{background:rgba(255,107,0,.06);border:1px solid rgba(255,107,0,.15);color:#475569}
+        [data-theme="light"] .coverage-map-visual{background:linear-gradient(180deg,#f8fafc 0%,#e2e8f0 100%) !important}
+        /* Pricing cards */
+        [data-theme="light"] .pricing-card{background:#fff !important;border:1px solid rgba(0,0,0,.06) !important;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+        [data-theme="light"] .pricing-card h3,[data-theme="light"] .pkg-name{color:#0f172a !important}
+        [data-theme="light"] .pkg-sub{color:#64748b}
+        [data-theme="light"] .pkg-features li{color:#334155}
+        [data-theme="light"] .pkg-features i{color:var(--primary)}
+        [data-theme="light"] .pkg-quote{color:#475569 !important}
+        [data-theme="light"] .pkg-note{color:#64748b}
+        [data-theme="light"] .old-price{color:#94a3b8 !important}
+        [data-theme="light"] .price-tag{color:#0f172a}
+        [data-theme="light"] .price-tag .amount{color:var(--primary)}
+        /* Features / Software */
+        [data-theme="light"] .feature-box{background:rgba(124,58,237,.03);border:1px solid rgba(124,58,237,.12)}
+        [data-theme="light"] .feature-box:hover{background:rgba(124,58,237,.06);border-color:rgba(124,58,237,.25)}
+        [data-theme="light"] .feature-content h3{color:#0f172a}
+        [data-theme="light"] .feature-content p{color:#475569}
+        /* Testimonials */
+        [data-theme="light"] .testimonial-card{background:#fff !important;border:1px solid rgba(0,0,0,.06)}
+        [data-theme="light"] .testimonial-card p,[data-theme="light"] .testimonial-text{color:#334155}
+        [data-theme="light"] .testimonial-card h4{color:#0f172a}
+        /* Stats */
+        [data-theme="light"] .hero-stats{background:rgba(255,255,255,.85) !important;border:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .stat-num{color:#0f172a}
+        [data-theme="light"] .stat-label{color:#64748b}
+        [data-theme="light"] .stat-divider{background:rgba(0,0,0,.1)}
+        /* Badges */
+        [data-theme="light"] .badge-pill{background:rgba(0,0,0,.04);border:1px solid rgba(0,0,0,.1);color:#475569}
+        [data-theme="light"] .badge-discount{background:#ef4444;color:#fff}
+        [data-theme="light"] .section-tag{color:var(--primary)}
+        [data-theme="light"] .section-title{color:#0f172a}
+        [data-theme="light"] .section-desc{color:#64748b}
+        /* Modal */
+        [data-theme="light"] .modal-content{background:#fff !important;border:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .modal-content h2,[data-theme="light"] .modal-header h2{color:#0f172a}
+        [data-theme="light"] .modal-content p,[data-theme="light"] .modal-header p{color:#64748b}
+        [data-theme="light"] .close-modal{color:#64748b !important}
+        [data-theme="light"] .close-modal:hover{color:#0f172a !important}
+        /* Estimation box */
+        [data-theme="light"] .estimation-box{background:rgba(0,0,0,.02);border:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .estimation-box h4{color:#0f172a}
+        [data-theme="light"] .est-row{color:#334155}
+        [data-theme="light"] .est-row.total{color:#0f172a}
+        [data-theme="light"] .est-divider{background:rgba(0,0,0,.1)}
+        [data-theme="light"] .note{color:#94a3b8}
+        /* Marquee */
+        [data-theme="light"] .logo-marquee{background:rgba(0,0,0,.02);border-top:1px solid rgba(0,0,0,.05);border-bottom:1px solid rgba(0,0,0,.05)}
+        /* Tech badges */
+        [data-theme="light"] .tech-badges .badge-pill{border-color:#cbd5e1;color:#475569}
+        /* Trust badges */
+        [data-theme="light"] .t-badge{background:rgba(0,0,0,.04) !important;color:#334155}
+        /* CTA - keep the orange gradient bg but ensure text is readable */
+        [data-theme="light"] .cta-container{background:var(--grad-main)}
+        [data-theme="light"] .cta-container h2{color:#fff}
+        [data-theme="light"] .cta-container p{color:rgba(255,255,255,.85)}
+        [data-theme="light"] .cta-container .btn{color:#fff !important}
+        /* Portfolio */
+        [data-theme="light"] .portfolio-item{background:#fff;border:1px solid rgba(0,0,0,.06)}
+        [data-theme="light"] .portfolio-overlay{background:rgba(0,0,0,.7)}
+        [data-theme="light"] .portfolio-overlay h4,[data-theme="light"] .portfolio-overlay p{color:#fff}
+        [data-theme="light"] .filter-btn{background:rgba(0,0,0,.04);color:#475569;border:1px solid rgba(0,0,0,.08)}
+        [data-theme="light"] .filter-btn.active,[data-theme="light"] .filter-btn:hover{background:var(--primary);color:#fff;border-color:var(--primary)}
+        /* Loader */
+        [data-theme="light"] .loader-container{background:#f1f5f9 !important}
+        [data-theme="light"] .loader-logo span{color:#0f172a}
+        /* Mobile nav */
+        [data-theme="light"] .nav-menu{background:rgba(241,245,249,.98) !important}
+        @media(max-width:768px){
+          [data-theme="light"] .navbar{background:#f1f5f9 !important;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+          [data-theme="light"] .nav-right-group{border-top-color:rgba(0,0,0,.1) !important}
+          [data-theme="light"] .nav-lang-top{border-bottom-color:rgba(0,0,0,.1) !important}
+          [data-theme="light"] .nav-theme-bottom{border-top-color:rgba(0,0,0,.1) !important}
+          [data-theme="light"] .nav-lang-top .lang-label,[data-theme="light"] .nav-theme-bottom .theme-label{color:#64748b !important}
+          [data-theme="light"] .nav-lang-top .lang-toggle-btn,[data-theme="light"] .nav-theme-bottom .theme-toggle-btn{background:rgba(0,0,0,.04) !important;border:1px solid rgba(0,0,0,.1) !important;color:#0f172a !important}
+        }
+        /* Grid overlay */
+        [data-theme="light"] .grid-overlay{background-image:linear-gradient(rgba(0,0,0,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(0,0,0,.025) 1px,transparent 1px)}
+        /* Theme toggle */
+        [data-theme="light"] .theme-toggle-btn{background:rgba(0,0,0,.06) !important;border:1px solid rgba(0,0,0,.12) !important;color:#0f172a !important}
+        [data-theme="light"] .theme-toggle-btn:hover{background:var(--primary) !important;color:#fff !important;border-color:var(--primary) !important}
+        /* Spinner */
+        [data-theme="light"] .spinner{border-color:rgba(0,0,0,.1);border-left-color:var(--primary)}
+        /* Neon rings - hide in light mode */
+        [data-theme="light"] .neon-ring{opacity:.12}
+        /* Card icon backgrounds */
+        [data-theme="light"] .card-icon{background:rgba(0,0,0,.04)}
+        /* Review cards */
+        [data-theme="light"] .review-result p{color:#991b1b !important}
+        [data-theme="light"] .review-text{color:#334155 !important}
+        [data-theme="light"] .review-text strong{color:#0f172a}
+        [data-theme="light"] .reviewer-img{background:#e2e8f0 !important}
+        [data-theme="light"] .reviewer-img i{color:#64748b !important}
+        /* Liquid cards (advanced pricing) - MUST override base dark styles */
+        [data-theme="light"] .liquid-card{background:rgba(255,255,255,.92) !important;border:1px solid rgba(0,0,0,.08) !important;box-shadow:0 4px 16px rgba(0,0,0,.06) !important}
+        [data-theme="light"] .liquid-card .pricing-header{border-bottom:1px solid rgba(0,0,0,.08) !important;background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,transparent 100%) !important}
+        [data-theme="light"] .liquid-card .pkg-features li{color:#1e293b !important;border-bottom:1px solid rgba(0,0,0,.06) !important}
+        [data-theme="light"] .liquid-card::before{background:linear-gradient(180deg,rgba(0,0,0,.02) 0%,transparent 100%) !important}
+        [data-theme="light"] .liquid-card:hover{box-shadow:0 12px 30px rgba(0,0,0,.1) !important;border-color:rgba(0,0,0,.15) !important}
+        /* Platinum theme in light mode */
+        [data-theme="light"] .theme-platinum{background:#fff !important;border:1px solid rgba(0,0,0,.1) !important}
+        [data-theme="light"] .theme-platinum::after{opacity:.15}
+        [data-theme="light"] .theme-platinum .pkg-name{background:linear-gradient(to right,#0f172a,#475569);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+        [data-theme="light"] .theme-platinum .price-tag .amount{color:#0f172a !important;text-shadow:none}
+        [data-theme="light"] .theme-purple .price-tag{color:#7c3aed !important}
+        [data-theme="light"] .theme-gold .price-tag{color:#b45309 !important}
+        [data-theme="light"] .theme-emerald .price-tag{color:#059669 !important}
+        [data-theme="light"] .pkg-ultra-prominent .features-wrapper{color:#334155}
+        /* Ensure ALL text in pricing cards is dark */
+        [data-theme="light"] .pricing-card .pkg-features li{color:#1e293b !important}
+        [data-theme="light"] .pricing-card .pkg-features li i{color:var(--primary) !important}
+        /* All elements with hardcoded #ffcccc (warning/review text) */
+        [data-theme="light"] [style*="ffcccc"]{color:#991b1b !important}
+        /* Data recovery warning box */
+        [data-theme="light"] .service-card div[style*="185, 28, 28"]{background:rgba(220,38,38,.06) !important}
+        /* Review result boxes */
+        [data-theme="light"] .review-result{background:rgba(220,38,38,.06) !important}
+        /* CTA promo banner */
+        [data-theme="light"] div[style*="220, 38, 38, 0.1"]{background:rgba(220,38,38,.06) !important;border-color:rgba(220,38,38,.2) !important}
+        [data-theme="light"] div[style*="220, 38, 38, 0.1"] p{color:#991b1b !important}
+        /* Review cards (strong variant) - white text fix */
+        [data-theme="light"] .review-card-strong{background:#fff !important;border:1px solid rgba(0,0,0,.08) !important}
+        [data-theme="light"] .review-card-strong:hover{background:#f8fafc !important;border-color:rgba(0,0,0,.12) !important}
+        [data-theme="light"] .review-card-strong h4{color:#0f172a !important}
+        [data-theme="light"] .review-card-strong .review-text{color:#334155 !important}
+        [data-theme="light"] .review-card-strong .reviewer-footer{border-top-color:rgba(0,0,0,.1) !important}
+        [data-theme="light"] .review-card-strong .reviewer-footer p{color:#0f172a !important}
+        [data-theme="light"] .review-card-strong .reviewer-footer p[style*="text-muted"]{color:#64748b !important}
+        /* Any element with inline white text (except on colored buttons) */
+        [data-theme="light"] .review-card-strong [style*="color: white"]{color:#0f172a !important}
+        [data-theme="light"] .review-card-strong [style*="color:white"]{color:#0f172a !important}
+        [data-theme="light"] .review-card-strong [style*="rgba(255,255,255,0.8)"]{color:#334155 !important}
+        [data-theme="light"] .review-card-strong [style*="rgba(255,255,255,0.1)"]{border-top-color:rgba(0,0,0,.1) !important}
+        /* Center alignment for mobile */
+        @media(max-width:768px){
+          .footer-content{text-align:center !important}
+          .footer-content .social-links{justify-content:center}
+          .footer-contact p{justify-content:center}
+          .testimonial-card,.review-card-strong{text-align:center !important}
+          .review-header,.reviewer-footer{text-align:center !important}
+        }
+        /* Reset */
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{font-family:'Outfit',system-ui,-apple-system,sans-serif;background-color:#0a0e17;color:#fff;line-height:1.6;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:'Plus Jakarta Sans',system-ui,sans-serif;font-weight:700}
+        a{text-decoration:none;color:inherit;transition:.3s ease}
+        ul{list-style:none}
+        img{max-width:100%;display:block}
+        /* Container */
+        .container{max-width:1200px;margin:0 auto;padding:0 var(--container-padding)}
+        .center{text-align:center}
+        /* Loader */
+        .loader-container{position:fixed;top:0;left:0;width:100%;height:100%;background:#0a0e17;display:flex;justify-content:center;align-items:center;z-index:9999;transition:opacity .3s}
+        .loader-logo{display:flex;flex-direction:column;align-items:center;gap:1rem;font-weight:700;letter-spacing:2px}
+        .spinner{width:40px;height:40px;border:4px solid rgba(255,255,255,.1);border-left-color:#FF6B00;border-radius:50%;animation:spin 1s linear infinite;will-change:transform}
+        @keyframes spin{100%{transform:rotate(360deg)}}
+        /* Navbar - explicit sizing to prevent CLS */
+        .navbar{position:fixed;top:0;left:0;width:100%;z-index:1000;padding:1.5rem 0;transition:.3s ease}
+        .navbar.scrolled{background:rgba(10,14,23,.85);backdrop-filter:blur(12px);padding:1rem 0;border-bottom:var(--glass-border)}
+        .nav-container{display:flex;justify-content:space-between;align-items:center}
+        .logo{display:flex;align-items:center;gap:10px;font-size:1.5rem;font-weight:800;letter-spacing:-.5px}
+        .logo-img{height:40px;width:40px;border-radius:50%;border:2px solid var(--primary);object-fit:cover}
+        .logo-text{color:#fff}
+        .highlight{color:#39ff14;font-weight:bold}
+        .nav-menu{display:flex;align-items:center;gap:2rem}
+        .nav-link{font-weight:500;font-size:.95rem;color:var(--text-muted);position:relative}
+        .mobile-toggle{display:none;flex-direction:column;gap:6px;background:none;border:none;cursor:pointer}
+        .bar{width:25px;height:2px;background-color:#fff;transition:.3s}
+        .lang-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:.4rem .8rem;border-radius:20px;cursor:pointer;font-size:.85rem;font-weight:600;transition:.3s;display:flex;align-items:center;gap:5px}
+        .nav-btn-mobile{padding:.6rem 1.2rem;background:var(--grad-main);border-radius:var(--radius-sm);color:#fff;font-weight:600;box-shadow:0 0 15px var(--accent-glow);transition:.3s}
+        /* Nav right group (contact + theme + lang) */
+        .nav-right-group{display:flex;align-items:center;gap:12px;margin-left:1rem}
+        /* Desktop: language & theme as compact icons at end of nav */
+        .nav-lang-top{order:6;margin-left:.5rem}
+        .nav-theme-bottom{order:7}
+        .nav-contact-mobile{order:5}
+        .nav-lang-top .lang-label,.nav-theme-bottom .theme-label{display:none}
+        .nav-lang-top .lang-toggle-btn,.nav-theme-bottom .theme-toggle-btn{width:38px;height:38px}
+        /* Language Dropdown */
+        .lang-dropdown-wrapper{position:relative}
+        .lang-toggle-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:.95rem;display:flex;align-items:center;justify-content:center;transition:.3s}
+        .lang-toggle-btn:hover{background:var(--primary);border-color:var(--primary)}
+        .lang-dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;background:rgba(15,23,42,.98);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:8px;min-width:200px;display:none;flex-direction:column;gap:2px;z-index:1001;backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(0,0,0,.4)}
+        .lang-dropdown-menu.show{display:flex}
+        .lang-option{display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:8px;color:#cbd5e1;font-size:.9rem;font-weight:500;transition:.2s;white-space:nowrap}
+        .lang-option:hover{background:rgba(255,255,255,.08);color:#fff}
+        .lang-option.active{background:rgba(255,107,0,.15);color:var(--primary);font-weight:700}
+        /* Grid overlay */
+        .grid-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:50px 50px;z-index:-1;pointer-events:none;contain:strict}
+        /* Hero Carousel - explicit min-height prevents CLS from content appearing */
+        .hero-carousel{padding-top:70px;min-height:100vh;min-height:100svh;position:relative;background:#0a0e17}
+        .swiper{width:100%;height:100%}
+        .swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}
+        .swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:flex;align-items:center;justify-content:center}
+        /* Swiper nav buttons hidden until CSS loads */
+        .swiper-button-prev,.swiper-button-next{display:none}
+        .swiper-pagination{position:absolute;bottom:20px;left:0;width:100%;text-align:center;z-index:10}
+        /* Background */
+        .aesthetic-bg{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-5;overflow:hidden;pointer-events:none;contain:strict}
+        .neon-ring{position:absolute;border-radius:50%;background:transparent;opacity:.45;will-change:transform;transform:translateZ(0)}
+        /* Buttons */
+        .btn{display:inline-flex;align-items:center;gap:.8rem;padding:.8rem 1.8rem;border-radius:var(--radius-sm);font-weight:600;font-size:1rem;cursor:pointer;transition:all .3s ease;border:none}
+        .btn-primary{background:var(--grad-main);color:#fff}
+        .btn-secondary{background:rgba(255,255,255,.05);color:#fff;border:var(--glass-border)}
+        /* Sections - give all sections a min-height to prevent CLS */
+        section,.services,.testimonials-section,.coverage,.cta-section{min-height:0}
+        /* Glass card base */
+        .glass-card{background:var(--bg-card);border:var(--glass-border);border-radius:var(--radius-md);padding:2.5rem;backdrop-filter:blur(10px);transition:.3s;position:relative;overflow:hidden}
+        /* Float WhatsApp button */
+        .float-wa-btn{position:fixed;bottom:30px;right:30px;z-index:10000;background:#25D366;color:#fff;padding:12px 22px;border-radius:50px;display:flex;align-items:center;gap:10px;font-weight:700;font-size:1rem;box-shadow:0 5px 25px rgba(37,211,102,.4);transition:.3s;animation:waPulse 2s infinite}
+        .float-wa-btn:hover{transform:translateY(-5px);box-shadow:0 10px 35px rgba(37,211,102,.6);color:#fff}
+        .float-wa-btn i{font-size:1.5rem}
+        @keyframes waPulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.7)}70%{box-shadow:0 0 0 15px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+        /* Theme Toggle */
+        .theme-toggle-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:.3s}
+        .theme-toggle-btn:hover{background:var(--primary);border-color:var(--primary)}
+        [data-theme="light"] .theme-toggle-btn{background:rgba(0,0,0,.05);border:1px solid rgba(0,0,0,.15);color:#1e293b}
+        [data-theme="light"] .theme-toggle-btn:hover{background:var(--primary);color:#fff}
+        /* Chat widget removed */
+        /* Mobile nav */
+        @media(max-width:768px){
+          .nav-menu{position:fixed;top:0;right:-100%;width:80%;height:100vh;background:rgba(10,14,23,.98);flex-direction:column;justify-content:flex-start;padding:5rem 1.5rem 1.5rem;transition:.3s cubic-bezier(.4,0,.2,1);z-index:999;gap:0;overflow-y:auto}
+          .nav-menu.active{right:0}
+          .nav-menu .nav-item{margin-bottom:2px}
+          .nav-menu .nav-link{font-size:1.05rem;padding:.5rem 0;display:block}
+          /* Reset desktop order for mobile natural flow */
+          .nav-lang-top,.nav-theme-bottom,.nav-contact-mobile{order:0;margin-left:0}
+          /* Language at top */
+          .nav-lang-top{margin-bottom:.8rem;padding-bottom:.8rem;border-bottom:1px solid rgba(255,255,255,.08)}
+          .nav-lang-top .lang-label{display:inline;font-size:.9rem;margin-left:8px;color:var(--text-muted)}
+          .nav-lang-top .lang-toggle-btn{width:auto;height:auto;padding:8px 14px;border-radius:20px;font-size:.9rem;gap:4px}
+          .nav-lang-top .lang-dropdown-menu{right:auto;left:0;min-width:200px}
+          /* Contact button */
+          .nav-contact-mobile{margin:1rem 0}
+          .nav-contact-mobile .nav-btn-mobile{width:100%;text-align:center;padding:.75rem;font-size:1rem}
+          /* Theme at bottom */
+          .nav-theme-bottom{margin-top:auto !important;padding-top:1rem;border-top:1px solid rgba(255,255,255,.08)}
+          .nav-theme-bottom .theme-label{display:inline;font-size:.9rem;margin-left:8px;color:var(--text-muted)}
+          .nav-theme-bottom .theme-toggle-btn{width:auto;height:auto;padding:8px 14px;border-radius:20px;font-size:.9rem;gap:4px}
+          .mobile-toggle{display:flex;z-index:1001}
+          .navbar{background-color:#0a0e17;padding:1rem 0;box-shadow:0 4px 10px rgba(0,0,0,.3)}
+          .hero-carousel{padding-top:64px;min-height:100svh}
+          .swiper-slide{min-height:calc(100svh - 64px);padding:80px 16px 40px}
+          .grid-overlay,.aesthetic-bg{display:none}
+          .container{padding:0 1rem}
+          .logo-img{height:36px;width:36px}
+          .float-wa-btn{bottom:20px;right:20px;padding:10px 18px;font-size:.85rem}
+          .float-wa-btn span{display:none}
+          .float-wa-btn i{font-size:1.3rem}
+        }
+        /* Prevent layout shift from font loading */
+        @font-face{font-family:'Outfit';font-display:swap}
+        @font-face{font-family:'Plus Jakarta Sans';font-display:swap}
+    </style>
+
+    <!-- style.css dimuat ASYNC (non-blocking) -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+    <!-- Swiper CSS - non-blocking -->
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"></noscript>
+
+    <!-- Font Awesome - non-blocking (icons bukan LCP) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Google Fonts: display=swap untuk render font lebih cepat -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+
+
+    <!-- Google Tag Manager - async agar tidak blocking -->
+    <script>window.dataLayer=window.dataLayer||[];(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PCSRJJGN');</script>
+
+</head>
+
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCSRJJGN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Loading Screen -->
+    <div class="loader-container" id="loader">
+        <div class="loader-logo">
+            <div class="spinner"></div>
+            <span>SATUJALAN</span>
+        </div>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="aesthetic-bg">
+        <div class="neon-ring ring-travel-1"></div>
+        <div class="neon-ring ring-travel-2"></div>
+        <div class="neon-ring ring-travel-3"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="logo.webp" alt="SatuJalan Logo" class="logo-img" fetchpriority="high" width="40" height="40">
+                <span class="logo-text">SATU<span class="highlight">JALAN</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <!-- Language selector - always at top in mobile -->
+                <li class="nav-item nav-lang-top">
+                    <div class="lang-dropdown-wrapper">
+                        <button class="lang-toggle-btn" id="lang-toggle-btn" title="Select Language" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span class="lang-label">Language</span>
+                        </button>
+                        <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+                            <a href="index_en.html" class="lang-option active">🇺🇸 English</a>
+                            <a href="index.html" class="lang-option">🇮🇩 Bahasa Indonesia</a>
+                            <a href="index_ar.html" class="lang-option">🇸🇦 العربية</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item nav-dropdown-wrapper">
+                    <a href="#" class="nav-link" onclick="event.preventDefault();">Services <i class="fas fa-chevron-down" style="font-size: 0.75em; margin-left: 4px;"></i></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="#hardware" class="nav-dropdown-item">Hardware</a>
+                        <a href="#software" class="nav-dropdown-item">Software</a>
+                        <a href="#web-pricing" class="nav-dropdown-item">Web Services</a>
+                    </div>
+                </li>
+                <li class="nav-item nav-dropdown-wrapper">
+                    <a href="#" class="nav-link" onclick="event.preventDefault();">Our Products <i class="fas fa-chevron-down" style="font-size: 0.75em; margin-left: 4px;"></i></a>
+                    <div class="nav-dropdown-menu">
+                        <a href="https://studio.satujalan.id" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer">SJ IMAGE</a>
+                        <a href="https://app.satujalan.id/" class="nav-dropdown-item" target="_blank" rel="noopener noreferrer">Finance AI</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="#coverage" class="nav-link">Coverage Area</a></li>
+                <li class="nav-item"><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li class="nav-item nav-contact-mobile">
+                    <a href="https://wa.me/6281515333370?text=Hello%20Admin%0AName%3A%0AI%20would%20like%20to%20..." class="nav-btn-mobile">Contact Us</a>
+                </li>
+                <!-- Theme toggle - always at bottom in mobile -->
+                <li class="nav-item nav-theme-bottom">
+                    <button id="theme-toggle" class="theme-toggle-btn" title="Toggle Theme" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i> <span class="theme-label">Dark/Light Mode</span>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO CAROUSEL -->
+    <section id="home" class="hero-carousel">
+        <div class="swiper hero-slider">
+            <div class="swiper-wrapper">
+
+                <!-- ========== SLIDE 1: PEMBUATAN WEB ========== -->
+                <div class="swiper-slide"
+                    style="background: linear-gradient(135deg, #F9FAFB 0%, #E5E7EB 100%); padding: 120px 20px;">
+                    <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                        <h1 style="font-size: 52px; font-weight: 700; line-height: 1.2; margin-bottom: 24px;">
+                            <span style="color: #1F2937;">Competitors Are Online—Is Your Business</span>
+                            <span style="color: #DC2626;">Still Offline?</span><br>
+                            <span style="color: #1F2937;">Professional Website Starting at</span>
+                            <span style="color: #10B981; font-size: 60px;">Rp 259k</span>
+                            <span style="color: #1F2937;">. Not Just a Digital Business Card!</span>
+                        </h1>
+                        <p style="color: #4B5563; font-size: 20px; line-height: 1.6; margin-bottom: 32px;">
+                            From landing pages to complex online stores—we build it in 3-7 working days.
+                            Responsive, fast, and revenue-ready. <strong style="color: #10B981;">150+ businesses have
+                                trusted us.</strong>
+                        </p>
+                        <a href="#web-pricing"
+                            style="display: inline-block; background: #2563EB; color: white; padding: 18px 40px; border-radius: 12px; font-size: 20px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(37,99,235,0.3); transition: transform 0.3s;">
+                            View Portfolio & Pricing ?
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ========== SLIDE 2: SERVIS HARDWARE ========== -->
+                <div class="swiper-slide"
+                    style="background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%); padding: 120px 20px;">
+                    <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                        <h1 style="font-size: 52px; font-weight: 700; line-height: 1.2; margin-bottom: 24px;">
+                            <span style="color: #DC2626;">Laptop Mati? Data Hilang? Meeting 2 Jam Lagi?</span><br>
+                            <span style="color: #1F2937;">Teknisi Kami Datang dalam</span>
+                            <span style="color: #FF6B00; font-size: 60px;">2 Jam</span>
+                            <span style="color: #1F2937;">�Selesai di Tempat!</span>
+                        </h1>
+                        <p style="color: #4B5563; font-size: 20px; line-height: 1.6; margin-bottom: 32px;">
+                            Dari layar pecah, laptop kena air, hingga data recovery darurat�
+                            <strong style="color: #DC2626;">500+ klien</strong> selamatkan perangkat & data mereka
+                            tanpa ke service center. Written Warranty. Transparent Pricing sejak awal.
+                        </p>
+                        <a href="#contact" id="btn-open-hardware-modal"
+                            style="display: inline-block; background: #DC2626; color: white; padding: 18px 40px; border-radius: 12px; font-size: 20px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(220,38,38,0.3); transition: transform 0.3s;">
+                            Call Technician Now <i class="fas fa-tools"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ========== SLIDE 3: ASET DIGITAL ========== -->
+                <div class="swiper-slide"
+                    style="background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%); padding: 120px 20px;">
+                    <div class="hero-content" style="max-width: 900px; margin: 0 auto; text-align: center;">
+                        <h1 style="font-size: 52px; font-weight: 700; line-height: 1.2; margin-bottom: 24px;">
+                            <span style="color: #7C3AED;">Butuh Template Premium Tapi Budget Terbatas?</span><br>
+                            <span style="color: #1F2937;">Aset Digital Berkualitas Studio Mulai</span>
+                            <span style="color: #10B981; font-size: 60px;">Rp 10rb</span>
+                            <span style="color: #1F2937;">�</span>
+                            <span
+                                style="color: #F59E0B; background: rgba(245,158,11,0.2); padding: 4px 12px; border-radius: 6px;">Hemat
+                                90%!</span>
+                        </h1>
+                        <p style="color: #4B5563; font-size: 20px; line-height: 1.6; margin-bottom: 32px;">
+                            Logo, mockup, template video, hingga UI Kit profesional�tanpa perlu langganan mahal.
+                            Download instant, lisensi legal, support penuh dari kami.
+                            <strong style="color: #7C3AED;">Ribuan aset siap pakai!</strong>
+                        </p>
+                        <a href="https://elements.envato.com/" target="_blank"
+                            style="display: inline-block; background: #7C3AED; color: white; padding: 18px 40px; border-radius: 12px; font-size: 20px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 12px rgba(124,58,237,0.3); transition: transform 0.3s;">
+                            Explore Digital Catalog ?
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Navigation & Pagination -->
+            <div class="swiper-button-prev" style="color: #1F2937;"></div>
+            <div class="swiper-button-next" style="color: #1F2937;"></div>
+            <div class="swiper-pagination" style="bottom: 40px;"></div>
+        </div>
+    </section>
+
+    <!-- Responsive Mobile -->
+    <style>
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 32px !important;
+            }
+
+            .hero-content h1 span[style*="font-size: 60px"] {
+                font-size: 40px !important;
+            }
+
+            .hero-content p {
+                font-size: 16px !important;
+            }
+
+            .swiper-slide {
+                padding: 80px 20px !important;
+            }
+        }
+
+        /* Hover Effect */
+        .swiper-slide a:hover {
+            transform: scale(1.05);
+        }
+
+        /* Swiper Navigation Styling */
+        .swiper-button-prev,
+        .swiper-button-next {
+            background: rgba(255, 255, 255, 0.8);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            color: #000 !important;
+            /* Force darker arrow color */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
+
+        .swiper-button-prev:after,
+        .swiper-button-next:after {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .swiper-button-prev:hover,
+        .swiper-button-next:hover {
+            background: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            transform: scale(1.1);
+        }
+    </style>
+
+
+
+    <!-- Value Proposition Section -->
+    <section class="services" style="padding-top: 2rem; padding-bottom: 4rem; background: rgba(10, 14, 23, 0.5);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" style="color: var(--secondary);">WHY US?</span>
+                <h2 class="section-title">Mengapa 9 dari 10 Klien <br><span style="color: var(--primary);">Tidak Pernah
+                        Kembali</span> to Other Service Centers?</h2>
+                <p class="section-desc">Karena kami tidak hanya memperbaiki�kami memastikan masalah Anda tidak terulang
+                    lagi.</p>
+            </div>
+
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <!-- Card 1 -->
+                <div class="glass-card" style="border-top: 3px solid #DC2626;">
+                    <div class="card-icon" style="background: rgba(220, 38, 38, 0.1); color: #DC2626;"><i
+                            class="fas fa-bolt"></i></div>
+                    <h3 style="color: #DC2626;">2-Hour Response</h3>
+                    <p>Perangkat rusak = bisnis terhenti. Kami paham itu. Tim kami siap datang ke lokasi Anda dalam 2
+                        jam sejak konfirmasi.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="glass-card" style="border-top: 3px solid #2563EB;">
+                    <div class="card-icon" style="background: rgba(37, 99, 235, 0.1); color: #2563EB;"><i
+                            class="fas fa-shield-alt"></i></div>
+                    <h3 style="color: #2563EB;">Written Warranty</h3>
+                    <p>Setiap pekerjaan dilindungi garansi resmi. Jika berulang dalam 30 hari, kami perbaiki GRATIS
+                        tanpa pertanyaan.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="glass-card" style="border-top: 3px solid #10B981;">
+                    <div class="card-icon" style="background: rgba(16, 185, 129, 0.1); color: #10B981;"><i
+                            class="fas fa-money-bill-wave"></i></div>
+                    <h3 style="color: #059669;">Transparent Pricing</h3>
+                    <p>Tidak ada biaya tersembunyi. Tidak ada 'tiba-tiba' kerusakan tambahan. Estimasi harga final
+                        sebelum pengerjaan dimulai.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Marquee -->
+    <div class="logo-marquee marquee-brand" style="opacity: 0.6;">
+        <div class="marquee-content" id="brand-marquee">
+            <!-- Brand Logos via JS -->
+        </div>
+    </div>
+
+    <!-- Main Services Section -->
+    <section id="hardware" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" style="color: var(--urgent-red);">FAST SOLUTIONS</span>
+                <h2 class="section-title">Tech Problems Making You <span
+                        style="color: var(--urgent-red);">Stressed?</span><br>We Have The Solution.</h2>
+            </div>
+
+            <div class="services-grid">
+                <!-- 1. Servis HP & Laptop -->
+                <div class="service-card glass-card">
+                    <div class="card-icon" style="background: rgba(220, 38, 38, 0.1); color: #DC2626;"><i
+                            class="fas fa-wrench"></i></div>
+                    <h3>Perangkat Rusak = Meeting Batal?</h3>
+                    <p>Jangan biarkan satu perangkat rusak menghentikan produktivitas Anda. Teknisi kami datang ke
+                        lokasi dalam 2 jam. <strong>Rata-rata penanganan: 45 menit.</strong></p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check" style="color: #DC2626;"></i> Layar pecah/LCD mati</li>
+                        <li><i class="fas fa-check" style="color: #DC2626;"></i> Keyboard/Trackpad error</li>
+                        <li><i class="fas fa-check" style="color: #DC2626;"></i> Laptop lambat/hang</li>
+                        <li><i class="fas fa-check" style="color: #DC2626;"></i> Baterai drop drastis</li>
+                        <li><i class="fas fa-check" style="color: #DC2626;"></i> Charging port rusak</li>
+                    </ul>
+                    <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20Laptop/HP%20saya%20rusak%20dan%20butuh%20perbaikan%20segera!"
+                        class="btn-text" style="color: #DC2626; font-weight: 800; font-size: 1.1rem;">Panggil Teknisi
+                        Sekarang <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 2. Data Recovery -->
+                <div class="service-card glass-card" style="border-color: rgba(185, 28, 28, 0.3);">
+                    <div class="card-icon" style="background: rgba(185, 28, 28, 0.1); color: #B91C1C;"><i
+                            class="fas fa-database"></i></div>
+                    <h3 style="color: #B91C1C;">Data Penting Hilang?</h3>
+                    <p>Skripsi, laporan keuangan, database klien�kami tahu betapa berharganya data Anda. <strong>10TB+
+                            data terselamatkan.</strong></p>
+                    <div
+                        style="background: rgba(185, 28, 28, 0.1); padding: 10px; border-radius: 8px; margin-bottom: 15px; border-left: 3px solid #B91C1C;">
+                        <p style="font-size: 0.85rem; color: #ffcccc; margin: 0;">?? <strong>Setiap menit yang lewat
+                                menurunkan peluang recovery hingga 15%.</strong></p>
+                    </div>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check" style="color: #B91C1C;"></i> Hard Disk Rusak/Bunyi</li>
+                        <li><i class="fas fa-check" style="color: #B91C1C;"></i> File Terhapus Permanen</li>
+                        <li><i class="fas fa-check" style="color: #B91C1C;"></i> Sistem Crash/Blue Screen</li>
+                    </ul>
+                    <a href="https://wa.me/6281515333370?text=URGENT!%20Saya%20butuh%20Data%20Recovery%20segera"
+                        class="btn-text" style="color: #B91C1C; font-weight: 800; font-size: 1.1rem;">Selamatkan Data
+                        Saya <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- 3. Web & Apps -->
+                <div class="service-card glass-card">
+                    <div class="card-icon" style="background: rgba(124, 58, 237, 0.1); color: #7C3AED;"><i
+                            class="fas fa-globe"></i></div>
+                    <h3 style="color: #7C3AED;">Kompetitor Sudah Online?</h3>
+                    <p>Di era digital, <strong>tidak punya website = tidak eksis</strong>. Kami transformasi ide Anda
+                        menjadi mesin revenue.</p>
+                    <p style="font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem;">
+                        <i class="fas fa-user-friends" style="color: #7C3AED;"></i> Sudah <strong>150+ bisnis</strong>
+                        percaya pada kami.
+                    </p>
+                    <ul class="card-list">
+                        <li><i class="fas fa-check" style="color: #7C3AED;"></i> Website Company Profile</li>
+                        <li><i class="fas fa-check" style="color: #7C3AED;"></i> Toko Online / E-Commerce</li>
+                        <li><i class="fas fa-check" style="color: #7C3AED;"></i> Aplikasi Android/iOS</li>
+                    </ul>
+                    <a href="#web-pricing" class="btn-text"
+                        style="color: #7C3AED; font-weight: 800; font-size: 1.1rem;">Wujudkan Digital Presence <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Software Services -->
+    <section id="software" class="services section-dark">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">DIGITAL SOLUTIONS</span>
+                <h2 class="section-title" data-lang="sw-title">Solusi <span class="highlight-purple">Software</span>
+                </h2>
+                <p class="section-desc" data-lang="sw-desc">Transformasi ide bisnis Anda menjadi produk digital modern.
+                </p>
+                <div class="tech-badges center"
+                    style="margin-top: 1rem; gap: 10px; display: flex; justify-content: center; flex-wrap: wrap;">
+                    <span class="badge-pill"
+                        style="border-color: var(--text-muted); color: var(--text-muted); font-size: 0.9rem; padding: 5px 15px;"><i
+                            class="fas fa-tachometer-alt"></i> High-Capable</span>
+                    <span class="badge-pill"
+                        style="border-color: var(--text-muted); color: var(--text-muted); font-size: 0.9rem; padding: 5px 15px;"><i
+                            class="fas fa-expand"></i> Scalability</span>
+                    <span class="badge-pill"
+                        style="border-color: var(--text-muted); color: var(--text-muted); font-size: 0.9rem; padding: 5px 15px;"><i
+                            class="fas fa-lock"></i> Securable</span>
+                </div>
+            </div>
+
+            <!-- Code Marquee (Software) -->
+            <div class="logo-marquee marquee-code">
+                <div class="marquee-content" id="code-marquee">
+                    <!-- Code Logos via JS -->
+                </div>
+            </div>
+            <br><br>
+
+            <div class="services-row">
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Web Development</h3>
+                        <p>Website company profile, toko online, hingga sistem informasi custom dengan desain premium.
+                        </p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Mobile Apps</h3>
+                        <p>Aplikasi Android & iOS yang responsif dan user-friendly untuk kebutuhan bisnis.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-mobile-screen"></i>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-content">
+                        <h3>Design & Multimedia</h3>
+                        <p>UI/UX Design, Logo, Video Editing, dan aset digital untuk branding.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="services section-dark"
+        style="background: linear-gradient(to bottom, var(--bg-dark), #0f172a);">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" data-lang="port-tag">OUR WORK</span>
+                <h2 class="section-title" data-lang="port-title">Portofolio <span class="highlight-blue">Unggulan</span>
+                </h2>
+                <p class="section-desc" data-lang="port-desc">REAL PROOF dedikasi kami dalam menghadirkan solusi
+                    digital berkualitas tinggi.</p>
+            </div>
+
+            <!-- Filters -->
+            <div class="portfolio-filter center">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="web">Website</button>
+                <button class="filter-btn" data-filter="app">Mobile Apps</button>
+            </div>
+
+            <!-- Grid -->
+            <div class="portfolio-grid">
+                <!-- Data will be populated by JS or hardcoded here. Hardcoding for SEO/Visibility -->
+
+                <!-- Web Projects -->
+                <div class="portfolio-item" data-category="web">
+                    <img loading="lazy" decoding="async" src="portofolio/web/web bilpay.webp" alt="Web Bilpay">
+                    <div class="portfolio-overlay">
+                        <h4>Web Bilpay</h4>
+                        <p>Fintech / PPOB</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img loading="lazy" decoding="async" src="portofolio/web/web nahwupintar.webp" alt="Web Nahwu Pintar">
+                    <div class="portfolio-overlay">
+                        <h4>Nahwu Pintar</h4>
+                        <p>E-Learning</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img loading="lazy" decoding="async" src="portofolio/web/web Peduli Pendidikan Umat (PPU).webp" alt="Web PPU">
+                    <div class="portfolio-overlay">
+                        <h4>Yayasan PPU</h4>
+                        <p>Charity / NGO</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img loading="lazy" decoding="async" src="portofolio/web/web pgri.webp" alt="Web PGRI">
+                    <div class="portfolio-overlay">
+                        <h4>Web PGRI</h4>
+                        <p>Organization</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="web">
+                    <img loading="lazy" decoding="async" src="portofolio/web/web Universitas Terbuka.webp" alt="Web UT">
+                    <div class="portfolio-overlay">
+                        <h4>Universitas Terbuka</h4>
+                        <p>Educational Institution</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                </div>
+
+                <!-- App Projects -->
+                <div class="portfolio-item" data-category="app">
+                    <img loading="lazy" decoding="async" src="portofolio/apps/Al-Qur'an Arti Perkata Offline.webp" alt="App Quran">
+                    <div class="portfolio-overlay">
+                        <h4>Al-Qur'an Perkata</h4>
+                        <p>Religious App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20google%20play.webp" alt="Google Play">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20ios%20store.webp" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img loading="lazy" decoding="async" src="portofolio/apps/Nahwu Shorof Pemula Lengkap.webp" alt="App Nahwu">
+                    <div class="portfolio-overlay">
+                        <h4>Nahwu Shorof</h4>
+                        <p>Education App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20google%20play.webp" alt="Google Play">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20ios%20store.webp" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img loading="lazy" decoding="async" src="portofolio/apps/PLN Mobile.webp" alt="PLN Mobile">
+                    <div class="portfolio-overlay">
+                        <h4>PLN Mobile Clone</h4>
+                        <p>Utility App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20google%20play.webp" alt="Google Play">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20ios%20store.webp" alt="App Store">
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="app">
+                    <img loading="lazy" decoding="async" src="portofolio/apps/Peduli Pendidikan Umat (PPU).webp" alt="App PPU">
+                    <div class="portfolio-overlay">
+                        <h4>App PPU</h4>
+                        <p>Social App</p>
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <div class="app-badges">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20google%20play.webp" alt="Google Play">
+                        <img loading="lazy" decoding="async" src="logo%20store/logo%20ios%20store.webp" alt="App Store">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Lightbox -->
+    <div id="portfolioModal" class="lightbox-modal">
+        <span class="close-lightbox">&times;</span>
+        <img loading="lazy" decoding="async" class="lightbox-content" id="lightboxImg">
+        <div id="caption"></div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section id="web-pricing" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" data-lang="pricing-tag" style="color: var(--secondary);">INVESTASI
+                    DIGITAL</span>
+                <h2 class="section-title" data-lang="pricing-title">Investasi Kecil, <span
+                        class="highlight-orange">Big Impact.</span></h2>
+                <p class="section-desc">Choose Your Package (Atau Free Consultation for Custom Plan).</p>
+                <div
+                    style="background: rgba(220, 38, 38, 0.1); display: inline-block; padding: 10px 20px; border-radius: 50px; margin-top: 1rem; border: 1px solid rgba(220, 38, 38, 0.3);">
+                    <p style="margin: 0; color: #EF4444; font-weight: 700;">? Promo Februari: Diskon 20% untuk 10
+                        project pertama. Tersisa 3 slot.</p>
+                </div>
+            </div>
+
+            <div class="pricing-grid">
+                <!-- Basic Package -->
+                <div class="pricing-card glass-card transform-hover" style="border-top: 4px solid #EF4444;">
+                    <div
+                        style="background: #EF4444; color: white; text-align: center; font-weight: 800; padding: 5px; border-radius: 4px; margin-bottom: 1rem; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.4);">
+                        ?? MOST POPULAR</div>
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Landing Page Package</h3>
+                        <span class="pkg-sub">Validasi Ide / Promosi Produk</span>
+                        <div class="badge-discount" style="margin: 10px auto;">DISKON 50%</div>
+                        <div class="old-price">Rp 518.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">259</span>
+                            <span class="unit">rb</span>
+                        </div>
+                        <p class="pkg-quote"
+                            style="font-size: 0.9rem; color: #39ff14; font-weight: 600; margin-top: 10px;">
+                            "Hemat 70% dibanding hiring freelancer biasa. Perfect untuk validasi MVP bisnis."
+                        </p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Landing page 1�3 section</li>
+                        <li><i class="fas fa-check-circle"></i> Fokus Leads & Closing (Copywriting)</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Mobile-First Premium</li>
+                        <li><i class="fas fa-check-circle"></i> Tombol Instant WA CTA</li>
+                        <li><i class="fas fa-check-circle"></i> 1x Revisi Major</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 2�3 Hari Kerja</li>
+                    </ul>
+                    <a href="https://wa.me/6281515333370?text=Saya%20ambil%20Promo%20Landing%20Page%20259rb!"
+                        class="btn btn-primary full-width glow-effect" style="background: #EF4444;">Ambil Slot Promo
+                        Ini</a>
+                </div>
+
+                <!-- Standard Package -->
+                <div class="pricing-card glass-card transform-hover" style="border-top: 4px solid var(--primary);">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Company Profile Package</h3>
+                        <span class="pkg-sub">Branding & Kredibilitas</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">Rp 4.400.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">2.2</span>
+                            <span class="unit">jt</span>
+                        </div>
+                        <p class="pkg-quote"
+                            style="font-size: 0.9rem; color: var(--primary); font-weight: 600; margin-top: 10px;">
+                            "ROI terbukti: Klien kami rata-rata mendapat +40% inquiry setelah launching website."
+                        </p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Website 4-5 Halaman</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Profesional & Trustworthy</li>
+                        <li><i class="fas fa-gem" style="color: var(--primary);"></i> <strong>GRATIS Konsultasi SEO
+                                Dasar</strong></li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi Google Maps & Sosmed</li>
+                        <li><i class="fas fa-check-circle"></i> 2x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 5�7 Hari Kerja</li>
+                    </ul>
+                    <a href="https://wa.me/6281515333370?text=Saya%20minat%20Paket%20Company%20Profile%202.2jt"
+                        class="btn btn-secondary full-width">Buat Company Profile</a>
+                </div>
+
+                <!-- Premium Package -->
+                <div class="pricing-card glass-card transform-hover" style="border-top: 4px solid var(--secondary);">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Web Application Package</h3>
+                        <span class="pkg-sub">Sistem Custom & Toko Online</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">Rp 11.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">5.5</span>
+                            <span class="unit">jt</span>
+                        </div>
+                        <p class="pkg-quote"
+                            style="font-size: 0.9rem; color: var(--secondary); font-weight: 600; margin-top: 10px;">
+                            "Startup pricing dengan enterprise quality. Konsultasi teknis GRATIS."
+                        </p>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Toko Online / Sistem Kasir / CRM</li>
+                        <li><i class="fas fa-check-circle"></i> Fitur Custom Sesuai Request</li>
+                        <li><i class="fas fa-database"></i> Database & CMS Admin Panel</li>
+                        <li><i class="fas fa-shield-alt" style="color: var(--secondary);"></i> <strong>Support 3 Bulan
+                                Pasca Launching</strong></li>
+                        <li><i class="fas fa-check-circle"></i> Unlimited Revisi Minor</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 14+ Hari Kerja</li>
+                    </ul>
+                    <a href="https://wa.me/6281515333370?text=Halo,%20saya%20butuh%20Web%20App%20Custom,%20bisa%20konsultasi?"
+                        id="btn-open-software-modal" class="btn btn-accent full-width"
+                        style="background: var(--secondary);">Konsultasi Project
+                        Custom</a>
+                </div>
+            </div>
+
+            <!-- Advanced Packages Toggle -->
+            <div class="advanced-toggle-container center" style="margin: 3rem 0;">
+                <button id="toggle-advanced-btn" class="btn btn-primary glow-effect" type="button"
+                    style="border-radius: 50px; padding: 1rem 2.5rem; cursor:pointer; position:relative; z-index:10;">
+                    <i class="fas fa-chevron-down"></i> View Advanced Packages
+                </button>
+            </div>
+
+            <!-- Advanced Packages Grid -->
+            <div id="advanced-pricing-grid" class="pricing-grid advanced-hidden"
+                style="display: none; opacity: 0; transition: all 0.5s ease;">
+
+                <!-- 1. Paket Advanced (Cyan) -->
+                <div class="pricing-card liquid-card theme-cyan">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Advanced</h3>
+                        <span class="pkg-sub">E-Commerce Smart Starter</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">
+                            Rp 13.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">6.5</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> Website E-Commerce Modern (Mobile-First)</li>
+                        <li><i class="fas fa-check-circle"></i> 8�10 Halaman (Katalog, Cart, Checkout)</li>
+                        <li><i class="fas fa-check-circle"></i> Payment Gateway (Midtrans/Stripe)</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen Produk & Stok Dasar</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen Transaksi & Status Order</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Kustom Premium</li>
+                        <li><i class="fas fa-check-circle"></i> SEO Basic + Optimasi Performa</li>
+                        <li><i class="fas fa-check-circle"></i> 3x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 15�20 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: UMKM, toko online yang ingin scale-up profesional.</p>
+                    <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Advanced%20(E-Commerce)"
+                        class="btn btn-secondary full-width">Pilih Advanced</a>
+                </div>
+
+                <!-- 2. Paket Pro (Purple) -->
+                <div class="pricing-card liquid-card theme-purple">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Pro</h3>
+                        <span class="pkg-sub">CMS Pro Secure (Portal/Berita)</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">
+                            Rp 17.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">8.5</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-check-circle"></i> CMS Lanjutan (Update Mudah Tanpa Coding)</li>
+                        <li><i class="fas fa-check-circle"></i> 10�15 Halaman (Berita, Kategori, Galeri)</li>
+                        <li><i class="fas fa-shield-alt"></i> Security: SSL, Firewall, Anti-Serangan</li>
+                        <li><i class="fas fa-check-circle"></i> Manajemen User & Role (Admin/Editor)</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi Pembayaran (Opsional)</li>
+                        <li><i class="fas fa-check-circle"></i> High Performance Cache & Compression</li>
+                        <li><i class="fas fa-check-circle"></i> 4�5x Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 20�30 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: Portal berita, komunitas, organisasi besar.</p>
+                    <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Pro%20(CMS%20Secure)"
+                        class="btn btn-secondary full-width">Pilih Pro</a>
+                </div>
+
+                <!-- 3. Paket Enterprise (Gold) -->
+                <div class="pricing-card liquid-card theme-gold" style="border-color: var(--secondary);">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Enterprise</h3>
+                        <span class="pkg-sub">Web App Database Real-Time</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">
+                            Rp 30.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">15</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fas fa-database"></i> Web App Berbasi Database (Workflow)</li>
+                        <li><i class="fas fa-key"></i> Auth: OAuth/JWT + Proteksi Akses</li>
+                        <li><i class="fas fa-bolt"></i> Fitur Real-Time (Update Tanpa Refresh)</li>
+                        <li><i class="fas fa-check-circle"></i> Integrasi API Eksternal (Payment/Maps)</li>
+                        <li><i class="fas fa-check-circle"></i> Dashboard Admin Lengkap</li>
+                        <li><i class="fas fa-check-circle"></i> Optimasi Stabilitas Tinggi</li>
+                        <li><i class="fas fa-check-circle"></i> 5x+ Revisi Desain</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 30�45 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: Sistem internal, CRM/ERP ringan, aplikasi operasional.</p>
+                    <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Enterprise"
+                        class="btn btn-accent full-width" style="background: var(--secondary);">Pilih Enterprise</a>
+                </div>
+
+                <!-- 4. Paket Premium Mobile (Emerald) -->
+                <div class="pricing-card liquid-card theme-emerald popular">
+                    <div class="popular-badge">MOBILE APP</div>
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Premium App</h3>
+                        <span class="pkg-sub">Mobile Android/iOS Real-Time</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">
+                            Rp 50.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">25</span>
+                            <span class="unit">jt</span>
+                        </div>
+                    </div>
+                    <ul class="pkg-features">
+                        <li><i class="fab fa-android"></i> Android & iOS (Native Feel UI)</li>
+                        <li><i class="fas fa-sync"></i> Database Sync Real-Time</li>
+                        <li><i class="fas fa-rocket"></i> Growth Features: Push Notif, GPS, Chat</li>
+                        <li><i class="fas fa-check-circle"></i> Desain Full Custom + Micro-Interaction</li>
+                        <li><i class="fas fa-server"></i> Backend Managed (Firebase/MySQL)</li>
+                        <li><i class="fas fa-check-circle"></i> 6x+ Revisi Desain</li>
+                        <li><i class="fas fa-headset"></i> Support 2 Bulan (Bug Fix)</li>
+                        <li><i class="fas fa-clock"></i> Estimasi: 45�60 Hari Kerja</li>
+                    </ul>
+                    <p class="pkg-note">Cocok Untuk: E-commerce mobile, booking system, startup.</p>
+                    <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Premium%20Mobile%20App"
+                        class="btn btn-accent full-width glow-orange">Pilih Premium App</a>
+                </div>
+
+                <!-- 5. Paket Ultra (Platinum - FULL WIDTH) -->
+                <div class="pricing-card liquid-card theme-platinum pkg-ultra-prominent">
+                    <div class="pricing-header">
+                        <h3 class="pkg-name">Paket Ultra � Enterprise Suite</h3>
+                        <span class="pkg-sub">AI + Integrasi Sistem + Governance</span>
+                        <div style="text-align: center; margin-bottom: 5px;">
+                            <span class="badge-discount">DISKON
+                                50%</span>
+                        </div>
+                        <div class="old-price">
+                            Rp 80.000.000</div>
+                        <div class="price-tag">
+                            <span class="currency">Rp</span>
+                            <span class="amount">40</span>
+                            <span class="unit">jt</span>
+                        </div>
+                        <p class="pkg-note" style="margin-top: 1rem;">Cocok Untuk: Perusahaan besar, butuh kontrol ketat
+                            & skalabilitas tinggi.</p>
+                        <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20tertarik%20Paket%20Ultra%20Enterprise"
+                            class="btn btn-primary full-width" style="margin-top: 1rem;">Hubungi untuk Konsultasi</a>
+                    </div>
+                    <div class="features-wrapper" style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                        <ul class="pkg-features">
+                            <li><i class="fas fa-network-wired"></i> Sistem End-to-End (Web + Backend + Integrasi)</li>
+                            <li><i class="fas fa-chart-line"></i> Dashboard Eksekutif & Analitik Otomatis</li>
+                            <li><i class="fas fa-cogs"></i> Integrasi ERP/CRM (Odoo/Zoho/HubSpot)</li>
+                            <li><i class="fas fa-robot"></i> Integrasi AI Ready</li>
+                        </ul>
+                        <ul class="pkg-features">
+                            <li><i class="fas fa-user-shield"></i> Multi-Role RBAC & Approval Flow</li>
+                            <li><i class="fas fa-lock"></i> Keamanan Lanjut (Backup, Firewall, Audit Log)</li>
+                            <li><i class="fas fa-bell"></i> Notifikasi Multi-Channel (WA/Email/Push)</li>
+                            <li><i class="fas fa-headset"></i> Support 3 Bulan (Stabilisasi)</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Notes & Education -->
+            <!-- Notes & Education -->
+            <div class="pricing-footer glass-card">
+                <div class="pricing-notes">
+                    <h4><i class="fas fa-info-circle"></i> Catatan Penting</h4>
+                    <ul>
+                        <li>Harga <strong>belum termasuk domain & hosting</strong> (bisa dibantu urus atau sediakan
+                            sendiri).
+                        </li>
+                        <li>Konten (teks & foto) <strong>disediakan klien</strong>; kami bantu perapian dasar.</li>
+                        <li>Sistem pembayaran: <strong>DP 50%</strong> di awal, 50% setelah website selesai.</li>
+                    </ul>
+                </div>
+                <div class="pricing-education">
+                    <h4>Apa itu <span class="highlight-text">Domain & Hosting</span>?</h4>
+                    <p>Bayangkan website seperti rumah:</p>
+                    <ul>
+                        <li><strong>Domain</strong> adalah <em>alamat rumah</em> (cth: www.tokosaya.com). Tanpa ini,
+                            orang
+                            susah mencari Anda.</li>
+                        <li><strong>Hosting</strong> adalah <em>tanah/lahan</em> tempat menyimpan file website (gambar,
+                            kode) agar selalu online.</li>
+                    </ul>
+                    <p class="edu-summary">Keduanya wajib ada agar website bisa diakses di internet.</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag" data-lang="testimoni-tag">REAL PROOF</span>
+                <h2 class="section-title" data-lang="testimoni-title">Do not Just Take Our Word.<br><span
+                        class="highlight">Trust Their Experience.</span></h2>
+                <p class="section-desc">Real results from clients yang telah membuktikan SERVICES SatuJalan.</p>
+            </div>
+
+            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <!-- Review 1: Laptop Repair -->
+                <div class="pricing-card glass-card review-card-strong">
+                    <div class="review-header"
+                        style="display: flex; gap: 15px; align-items: center; margin-bottom: 1rem;">
+                        <div class="reviewer-img"
+                            style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <i class="fas fa-user" style="color: #555;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem;">Budi Santoso</h4>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Mahasiswa Tingkat Akhir
+                            </p>
+                            <div style="color: #FFD700; font-size: 0.8rem;">?????</div>
+                        </div>
+                    </div>
+                    <div class="review-result"
+                        style="background: rgba(255, 68, 68, 0.1); border-left: 4px solid #DC2626; padding: 10px; margin-bottom: 1rem; border-radius: 4px;">
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #ffcccc; margin: 0;">? Hemat 73% biaya
+                            servis</p>
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #ffcccc; margin: 0;">? Data Skripsi
+                            Selamat 100%</p>
+                    </div>
+                    <p class="review-text" style="font-style: italic;">"Laptop mati total kena air, SC resmi bilang
+                        <strong>'mainboard harus ganti Rp 4,5 juta'</strong>. Di SatuJalan diperbaiki <strong>cuma Rp
+                            1,2 juta</strong>, data skripsi 100% selamat. Gila sih hemat banget!"
+                    </p>
+                </div>
+
+                <!-- Review 2: Data Recovery -->
+                <div class="pricing-card glass-card review-card-strong">
+                    <div class="review-header"
+                        style="display: flex; gap: 15px; align-items: center; margin-bottom: 1rem;">
+                        <div class="reviewer-img"
+                            style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <i class="fas fa-user-tie" style="color: #555;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem;">PT. Sinergi Logistik</h4>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Perusahaan Logistik</p>
+                            <div style="color: #FFD700; font-size: 0.8rem;">?????</div>
+                        </div>
+                    </div>
+                    <div class="review-result"
+                        style="background: rgba(185, 28, 28, 0.1); border-left: 4px solid #B91C1C; padding: 10px; margin-bottom: 1rem; border-radius: 4px;">
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #ffcccc; margin: 0;">? 250GB Data Client
+                            Pulih</p>
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #ffcccc; margin: 0;">? Bisnis Berjalan
+                            Kembali H+1</p>
+                    </div>
+                    <p class="review-text" style="font-style: italic;">"Server kantor crash, database hilang. Teknisi
+                        SatuJalan datang jam 11 malam, recovery selesai subuh. <strong>Bisnis kami selamat dari kerugian
+                            ratusan juta.</strong> Sangat profesional!"</p>
+                </div>
+
+                <!-- Review 3: Web Dev -->
+                <div class="pricing-card glass-card review-card-strong">
+                    <div class="review-header"
+                        style="display: flex; gap: 15px; align-items: center; margin-bottom: 1rem;">
+                        <div class="reviewer-img"
+                            style="width: 50px; height: 50px; background: #ddd; border-radius: 50%; display: flex; align-items: center; justify-content: center; overflow: hidden;">
+                            <i class="fas fa-shopping-bag" style="color: #555;"></i>
+                        </div>
+                        <div>
+                            <h4 style="margin: 0; font-size: 1.1rem;">Clara Fashion</h4>
+                            <p style="margin: 0; font-size: 0.85rem; color: var(--text-muted);">Owner Online Shop</p>
+                            <div style="color: #FFD700; font-size: 0.8rem;">?????</div>
+                        </div>
+                    </div>
+                    <div class="review-result"
+                        style="background: rgba(124, 58, 237, 0.1); border-left: 4px solid #7C3AED; padding: 10px; margin-bottom: 1rem; border-radius: 4px;">
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #E9D5FF; margin: 0;">? Omset Naik 40%</p>
+                        <p style="font-size: 0.9rem; font-weight: 600; color: #E9D5FF; margin: 0;">? Website Balik Modal
+                            dlm 2 Bln</p>
+                    </div>
+                    <p class="review-text" style="font-style: italic;">"Dulu cuma jualan di WA, ribet balesin chat.
+                        Setelah buat website di SatuJalan, <strong>orderan masuk otomatis 24 jam</strong>. Desainnya
+                        premium, pelanggan jadi lebih percaya."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coverage Area (Kept for SEO/Info) -->
+    <section id="coverage" class="services" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header center" style="margin-bottom: 3rem;">
+                <h2 class="section-title" data-lang="cov-title">Area <span class="highlight">SERVICES</span></h2>
+                <p class="section-desc" data-lang="cov-desc">Area SERVICES Pembuatan Web / Aplikasi Seluruh
+                    Indonesia.<br>Area SERVICES Servis Elektronik Jabodetabek (Home Service).</p>
+            </div>
+
+            <div class="center">
+                <div class="area-tags" style="justify-content: center; margin-bottom: 1.5rem;">
+                    <span class="tag">Jakarta</span>
+                    <span class="tag">Bogor</span>
+                    <span class="tag">Depok</span>
+                    <span class="tag">Tangerang</span>
+                    <span class="tag">Bekasi</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container cta-container center">
+            <h2 data-lang="cta-title">Still Unsure? FREE Consultation, No Commitment.</h2>
+            <p data-lang="cta-desc" style="max-width: 700px; margin: 0 auto 2rem auto;">Tell us your problem, dapatkan
+                estimasi biaya & solusi terbaik dalam 10 menit�bahkan sebelum kami datang. <strong>GRATIS, tanpa charge,
+                    tanpa kewajiban.</strong></p>
+
+            <a href="https://wa.me/6281515333370?text=Halo%20SatuJalan,%20saya%20mau%20Konsultasi%20Gratis%20dulu..."
+                class="btn btn-primary btn-lg pulse-anim"
+                style="background: #25D366; color: white; border: none; font-size: 1.2rem; padding: 1rem 3rem;">
+                <i class="fab fa-whatsapp"></i> ?? Chat WhatsApp Now - FREE
+            </a>
+
+            <p style="margin-top: 1.5rem; color: var(--text-muted); font-size: 0.9rem;">
+                Or contact us: <strong>0815-1533-3370</strong> (Senin-Sabtu, 08:00-20:00)
+            </p>
+
+            <div class="trust-badges"
+                style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem;">
+                <div class="t-badge"
+                    style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
+                    <i class="fas fa-bolt" style="color: #FF6B00;"></i> Respon &lt;2 Jam
+                </div>
+                <div class="t-badge"
+                    style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
+                    <i class="fas fa-shield-alt" style="color: #10B981;"></i> Written Warranty
+                </div>
+                <div class="t-badge"
+                    style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
+                    <i class="fas fa-money-bill" style="color: #2563EB;"></i> Transparent Pricing
+                </div>
+                <div class="t-badge"
+                    style="background: rgba(255,255,255,0.05); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem;">
+                    <i class="fas fa-check-double" style="color: #7C3AED;"></i> 500+ Klien Puas
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment Section -->
+    <section id="contact-comment" class="services">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-tag">FEEDBACK</span>
+                <h2 class="section-title">Kirim <span class="highlight">Komentar</span></h2>
+                <p class="section-desc">Criticism, suggestions, or messages apa pun akan terkirim langsung ke email kami.</p>
+            </div>
+
+            <div class="glass-card" style="max-width: 600px; margin: 0 auto; padding: 2rem;">
+                <form action="https://formsubmit.co/yulison47@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_subject" value="Komentar Baru dari Website SatuJalan">
+
+                    <div class="form-group">
+                        <label for="commentName">Nama</label>
+                        <input type="text" name="name" id="commentName" placeholder="Nama Anda" required
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="commentEmail">Email (Opsional)</label>
+                        <input type="email" name="email" id="commentEmail" placeholder="email@contoh.com"
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;">
+                    </div>
+
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="commentMessage">Pesan</label>
+                        <textarea name="message" id="commentMessage" rows="4" placeholder="Tulis pesan Anda di sini..."
+                            required
+                            style="width: 100%; padding: 10px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.05); color: white;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary full-width" style="margin-top: 1.5rem;">
+                        <i class="far fa-paper-plane"></i> Kirim Pesan
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>SATU<span class="highlight">JALAN</span></h3>
+                <p>"Satu Jalan, Semua Solusi"</p>
+                <div class="social-links">
+                    <a href="https://instagram.com/satu1_jalan" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61586812714479" target="_blank"><i
+                            class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>SERVICES</h4>
+                <a href="#hardware">Computer Repair</a>
+                <a href="#hardware">OS Reinstall</a>
+                <a href="#software">Web Development</a>
+                <a href="about.html">About Us</a>
+                <a href="blog.html">Blog</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+            <div class="footer-contact">
+                <h4>CONTACT</h4>
+                <p><i class="fab fa-whatsapp"></i> 0815-1533-3370</p>
+                <p><i class="far fa-envelope"></i> yulison47@gmail.com</p>
+                <p style="align-items: flex-start;"><i class="fas fa-map-marker-alt" style="margin-top: 5px;"></i>
+                    <span>Jl. H. Nursad, Ciater, Kec. Serpong, Kota Tangerang Selatan, Banten 15310</span>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom center">
+            <p>&copy; 2026 SatuJalan. All rights reserved.<br><span style="font-size: 0.9em; opacity: 0.7;">Pembuat
+                    Desain: Yopi</span></p>
+        </div>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <h2>Form Booking SERVICES</h2>
+                <p>Isi data untuk estimasi biaya & terhubung ke WhatsApp teknisi.</p>
+            </div>
+
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label for="serviceType">Jenis SERVICES</label>
+                    <select id="serviceType" required>
+                        <option value="Hardware - Reparasi">Reparasi Hardware</option>
+                        <option value="Hardware - Maintenance">Maintenance / Cleaning</option>
+                        <option value="Software - OS Reinstall">OS Reinstall Windows/Software</option>
+                        <option value="Software - Data Recovery">Data Recovery</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="deviceType">Detail Perangkat / Masalah</label>
+                    <input type="text" id="deviceType" placeholder="Contoh: Laptop Asus Mati Total" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">Lokasi (Kota) / GPS</label>
+                    <select id="city" required>
+                        <option value="">Pilih Kota...</option>
+                        <option value="Jakarta">Jakarta (Base Rate)</option>
+                        <option value="Depok">Depok (+Rp 25rb Transport)</option>
+                        <option value="Bogor">Bogor (+Rp 35rb Transport)</option>
+                        <option value="Tangerang">Tangerang (+Rp 25rb Transport)</option>
+                        <option value="Bekasi">Bekasi (+Rp 30rb Transport)</option>
+                        <option value="GPS">?? Gunakan GPS (Akurat)</option>
+                        <option value="Lainnya">Lainnya (Luar Jabodetabek)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="gps-group" style="display: none;">
+                    <button type="button" id="btn-location" class="btn btn-secondary full-width"
+                        style="margin-bottom: 10px; border-color: var(--primary); color: var(--primary);">
+                        <i class="fas fa-map-marker-alt"></i> Ambil Lokasi Saya
+                    </button>
+                    <p id="location-status" style="font-size: 0.8rem; color: var(--text-muted); text-align: center;">
+                        Lokasi belum diambil.</p>
+                    <input type="hidden" id="user-lat">
+                    <input type="hidden" id="user-long">
+                    <input type="hidden" id="calc-distance">
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Alamat Lengkap</label>
+                    <textarea id="address" rows="3" placeholder="Jl. Contoh No. 123, Kelurahan..." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingTime">Kapan Anda Butuh?</label>
+                    <select id="bookingTime" required>
+                        <option value="ASAP (Secepatnya)">ASAP (Secepatnya)</option>
+                        <option value="Hari Ini">Hari Ini</option>
+                        <option value="Besok">Besok</option>
+                        <option value="Jadwalkan Tanggal Lain">Jadwalkan Tanggal Lain</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran (Preferensi)</label>
+                    <div class="radio-group" style="display: flex; gap: 1rem; color: #fff;">
+                        <label><input type="radio" name="paymentMethod" value="Transfer" checked> Transfer</label>
+                        <label><input type="radio" name="paymentMethod" value="E-Wallet"> E-Wallet</label>
+                        <label><input type="radio" name="paymentMethod" value="COD/Tunai"> COD/Tunai</label>
+                    </div>
+                </div>
+
+                <!-- Live Estimation Box -->
+                <div class="estimation-box">
+                    <h4>Initial Cost Estimate</h4>
+                    <div class="est-row">
+                        <span>SERVICES (Start from):</span>
+                        <span>Rp 150.000</span>
+                    </div>
+                    <div class="est-row">
+                        <span>Transport:</span>
+                        <span id="transportCost">Rp 0</span>
+                    </div>
+                    <div class="est-divider"></div>
+                    <div class="est-row total">
+                        <span>Estimated Total:</span>
+                        <span id="totalCost">Rp 150.000</span>
+                    </div>
+                    <p class="note">*Biaya servis final ditentukan setelah pengecekan teknisi.</p>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <!-- Download Envato Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal close-download">&times;</span>
+            <div class="modal-header">
+                <h2>Jasa Download File Envato</h2>
+                <p>Dapatkan aset premium Envato dengan harga terjangkau (Mulai Rp 5rb/file).</p>
+            </div>
+
+            <form id="downloadForm">
+                <div class="form-group">
+                    <label for="envatoLink">Link File Envato</label>
+                    <input type="url" id="envatoLink" placeholder="https://elements.envato.com/..." required>
+                </div>
+
+                <div class="form-group">
+                    <label>Metode Pembayaran</label>
+                    <div class="radio-group" style="display: flex; gap: 1rem; color: #fff;">
+                        <label><input type="radio" name="dlPayment" value="Transfer" checked> Transfer</label>
+                        <label><input type="radio" name="dlPayment" value="E-Wallet"> E-Wallet</label>
+                        <label><input type="radio" name="dlPayment" value="QRIS"> QRIS</label>
+                    </div>
+                </div>
+
+                <!-- QRIS Display for Envato -->
+                <div id="envato-qris" class="center"
+                    style="display: none; margin-top: 1rem; padding: 10px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                    <i class="fas fa-qrcode" style="font-size: 100px; color: #000;"></i>
+                    <p style="margin-top: 8px; font-size: 0.85rem; color: #cbd5e1;">Scan QRIS untuk pembayaran cepat.
+                    </p>
+                </div>
+
+                <div class="estimation-box">
+                    <h4>Harga: Mulai Rp 10.000 / File</h4>
+                    <p class="note" style="margin-top: 5px;">*Harga tergantung kurs & paket.</p>
+                </div>
+
+                <button type="submit" class="btn btn-accent full-width">
+                    <i class="fab fa-whatsapp"></i> Pesan via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Software Request Modal -->
+    <div id="softwareModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close-modal close-software">&times;</span>
+            <div class="modal-header">
+                <h2>Request Project Software</h2>
+                <p>Konsultasikan kebutuhan digital Anda. Kami akan buatkan proposal.</p>
+            </div>
+
+            <form id="softwareForm">
+                <div class="form-group">
+                    <label for="swServiceType">Jenis SERVICES</label>
+                    <select id="swServiceType" required>
+                        <option value="Web Development">Web Development (Company/Toko)</option>
+                        <option value="Mobile App">Mobile App (Android/iOS)</option>
+                        <option value="UI/UX Design">UI/UX Design</option>
+                        <option value="Digital Assets">Digital Assets (Logo/Video)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="projectDesc">Deskripsi Project</label>
+                    <textarea id="projectDesc" rows="3" placeholder="Jelaskan fitur utama yang Anda butuhkan..."
+                        required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="budget">Range Budget</label>
+                    <select id="budget" required>
+                        <option value="< 5 Juta">Under 5 Juta</option>
+                        <option value="5 - 10 Juta">5 - 10 Juta</option>
+                        <option value="10 - 25 Juta">10 - 25 Juta</option>
+                        <option value="25 - 50 Juta">25 - 50 Juta</option>
+                        <option value="> 50 Juta">Sultan (> 50 Juta)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="timeline">Timeline (Deadline)</label>
+                    <input type="text" id="timeline" placeholder="Contoh: 1 Bulan / ASAP" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Butuh Pertemuan On-Site?</label>
+                    <div class="radio-group" style="display: flex; gap: 1rem; color: #fff;">
+                        <label><input type="radio" name="onsite" value="Ya" checked> Ya (Jabodetabek)</label>
+                        <label><input type="radio" name="onsite" value="Online Saja"> Remote / Online</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-secondary full-width">
+                    <i class="fab fa-whatsapp"></i> Kirim Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6281515333370?text=Assallamualaikum%20Admin%0ANama%20%3A%0ASaya%20ingin%20konsultasi%20..." 
+       class="float-wa-btn" target="_blank" title="Chat WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>Contact Us</span>
+    </a>
+
+    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+
+    <!-- Initialize Swiper (defer - runs after DOM + deferred scripts are ready) -->
+    <script defer>
+        document.addEventListener('DOMContentLoaded', () => {
+            const heroSlider = new Swiper('.hero-slider', {
+                speed: 800,
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

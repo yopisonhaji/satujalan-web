@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artikel - SatuJalan</title>
+    <link rel="icon" href="favicon.webp" type="image/webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .article-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding-top: 120px;
+            padding-bottom: 60px;
+        }
+
+        .article-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .article-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-title {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #ccc;
+        }
+
+        .article-body h2,
+        .article-body h3 {
+            color: white;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul,
+        .article-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .share-section {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 2rem 0;
+            margin: 3rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 1.8rem;
+            }
+
+            .article-img {
+                height: 250px;
+            }
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PCSRJJGN');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCSRJJGN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Background Elements -->
+    <div class="aesthetic-bg">
+        <div class="neon-ring ring-travel-1"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.webp" alt="SatuJalan Logo" class="logo-img">
+                <span class="logo-text">SATU<span class="highlight">JALAN</span></span>
+            </a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Kembali ke Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <article class="container article-container" id="article-content">
+        <div style="text-align: center; padding: 4rem;">
+            <i class="fas fa-spinner fa-spin fa-2x"></i> Memuat artikel...
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>SATU<span class="highlight">JALAN</span></h3>
+                <p>"One Way, All Solutions"</p>
+            </div>
+            <div class="footer-contact">
+                <p>&copy; 2026 SatuJalan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+    <script src="blog.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const postId = urlParams.get('id');
+
+            if (!postId) {
+                window.location.href = 'blog.html';
+                return;
+            }
+
+            const post = getPostById(postId);
+
+            if (!post) {
+                document.getElementById('article-content').innerHTML = `
+                    <div style="text-align: center; padding: 4rem;">
+                        <h2>Artikel Tidak Ditemukan</h2>
+                        <a href="blog.html" class="btn btn-primary" style="margin-top: 1rem;">Kembali ke Blog</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Render Post
+            document.title = `${post.title} - SatuJalan Blog`;
+
+            document.getElementById('article-content').innerHTML = `
+                <header class="article-header">
+                    <div class="article-meta">
+                        <span style="color: var(--secondary); font-weight: 700;">${post.category}</span>
+                        <span style="margin: 0 10px;">•</span>
+                        <span>${formatDate(post.date)}</span>
+                        <span style="margin: 0 10px;">•</span>
+                        <span>Oleh ${post.author}</span>
+                    </div>
+                    <h1 class="article-title">${post.title}</h1>
+                    <p class="article-subtitle" style="font-size: 1.2rem; color: #94a3b8;">${post.subtitle}</p>
+                </header>
+
+                <style>
+                    .active-like {
+                        background: rgba(34, 197, 94, 0.2) !important;
+                        border: 1px solid #22c55e !important;
+                        color: #22c55e !important;
+                        box-shadow: 0 0 10px rgba(34, 197, 94, 0.3);
+                    }
+                    .active-dislike {
+                        background: rgba(239, 68, 68, 0.2) !important;
+                        border: 1px solid #ef4444 !important;
+                        color: #ef4444 !important;
+                        box-shadow: 0 0 10px rgba(239, 68, 68, 0.3);
+                    }
+                </style>
+
+                <img loading="lazy" decoding="async" src="${post.image}" alt="${post.title}" class="article-img">
+
+                ${post.video ? (
+                    post.video.includes('youtube.com') || post.video.includes('youtu.be')
+                        ? `<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; border-radius: 20px; margin-bottom: 2rem;">
+                        <iframe src="${post.video.replace('watch?v=', 'embed/').replace('youtu.be/', 'youtube.com/embed/')}" 
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" frameborder="0" allowfullscreen></iframe>
+                       </div>`
+                        : `<video controls style="width: 100%; border-radius: 20px; margin-bottom: 2rem;">
+                        <source src="${post.video}" type="video/mp4">
+                        Browser Anda tidak mendukung tag video.
+                       </video>`
+                ) : ''}
+
+                <div class="article-body">
+                    ${post.content}
+                </div>
+
+
+
+                <!-- Engagement Section -->
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <div style="display: flex; align-items: center; gap: 20px;">
+                        <span style="color: #94a3b8;"><i class="far fa-eye"></i> <span id="viewCount">${post.views || 0}</span> Dilihat</span>
+                        <button id="likeBtn" onclick="handleLike('${post.id}')" class="btn-secondary" style="padding: 5px 15px;">
+                            <i class="far fa-thumbs-up"></i> <span id="likeCount">${post.likes || 0}</span>
+                        </button>
+                        <button id="dislikeBtn" onclick="handleDislike('${post.id}')" class="btn-secondary" style="padding: 5px 15px;">
+                            <i class="far fa-thumbs-down"></i> <span id="dislikeCount">${post.dislikes || 0}</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Comments Section -->
+                <div style="margin-top: 3rem;">
+                    <h3>Komentar (<span id="commentCount">${post.comments ? post.comments.length : 0}</span>)</h3>
+                    
+                    <!-- Comment Form -->
+                    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem;">
+                        <input type="text" id="commentName" placeholder="Nama Anda" style="width: 100%; padding: 10px; margin-bottom: 10px; background: rgba(0,0,0,0.2); border: 1px solid #334155; color: white; border-radius: 5px;">
+                        <textarea id="commentText" rows="3" placeholder="Tulis komentar..." style="width: 100%; padding: 10px; margin-bottom: 10px; background: rgba(0,0,0,0.2); border: 1px solid #334155; color: white; border-radius: 5px;"></textarea>
+                        <button onclick="submitComment('${post.id}')" class="btn-primary">Kirim Komentar</button>
+                    </div>
+
+                    <!-- Comment List -->
+                    <div id="commentList">
+                        ${post.comments ? post.comments.map(c => `
+                            <div style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                                <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${c.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">• ${timeAgo(c.date)}</span></div>
+                                <p style="color: #cbd5e1;">${c.text}</p>
+                            </div>
+                        `).join('') : ''}
+                    </div>
+                </div>
+
+                <div class="share-section">
+                    <span>Bagikan artikel ini:</span>
+                    <div class="social-links">
+                        <a href="https://wa.me/?text=Baca%20artikel%20ini:%20${encodeURIComponent(window.location.href)}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div style="text-align: center; margin-top: 4rem;">
+                    <a href="blog.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Kembali ke Blog</a>
+                </div>
+            `;
+
+            // Engagement Logic
+            incrementView(postId);
+
+            window.handleLike = function (id) {
+                const newCount = likePost(id);
+                if (newCount === -1) {
+                    alert('Anda sudah memberikan penilaian untuk artikel ini.');
+                } else {
+                    document.getElementById('likeCount').innerText = newCount;
+                }
+            };
+
+            window.handleDislike = function (id) {
+                const newCount = dislikePost(id);
+                if (newCount === -1) {
+                    alert('Anda sudah memberikan penilaian untuk artikel ini.');
+                } else {
+                    document.getElementById('dislikeCount').innerText = newCount;
+                }
+            };
+
+            window.submitComment = function (id) {
+                const name = document.getElementById('commentName').value;
+                const text = document.getElementById('commentText').value;
+                if (!name || !text) { alert('Mohon isi nama dan komentar!'); return; }
+                const newComment = addComment(id, name, text);
+                if (newComment) {
+                    const list = document.getElementById('commentList');
+                    const html = `
+                        <div style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                            <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${newComment.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">• Baru saja</span></div>
+                            <p style="color: #cbd5e1;">${newComment.text}</p>
+                        </div>
+                    `;
+                    list.insertAdjacentHTML('afterbegin', html);
+                    document.getElementById('commentName').value = '';
+                    document.getElementById('commentText').value = '';
+                    const countSpan = document.getElementById('commentCount');
+                    countSpan.innerText = parseInt(countSpan.innerText) + 1;
+                }
+            };
+        });
+    </script>
+</body>
+
+</html>

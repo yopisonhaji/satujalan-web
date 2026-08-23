@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Design Studio - Fast & Local</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Load Fabric.js for Canvas Manipulation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+</head>
+<body class="h-screen flex overflow-hidden selection:bg-blue-500 selection:text-white">
+
+    <!-- Sidebar -->
+    <aside class="w-64 glass-panel border-r border-gray-800 flex flex-col h-full shrink-0 z-10">
+        <div class="p-6">
+            <h1 class="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent flex items-center gap-3">
+                <img src="./frontend/public/logo.webp" alt="Logo" class="w-10 h-10 object-contain hover:scale-110 transition-transform">
+                DesignStudio
+            </h1>
+        </div>
+        
+        <nav class="flex-1 overflow-y-auto py-4 custom-scrollbar">
+            <ul class="space-y-1 px-3 text-sm font-medium">
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-blue-600/10 text-blue-400">
+                        <i class="fa-solid fa-layer-group w-5"></i> Design Feeds
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-border-all w-5"></i> 9 Feed Konsisten
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-images w-5"></i> Carousel
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-brands fa-youtube w-5"></i> YouTube Thumbnail
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-utensils w-5"></i> Menu F&B
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-shirt w-5"></i> Katalog Fashion
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-bullhorn w-5"></i> Promo Banner
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-quote-left w-5"></i> Quotes Template
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-chart-pie w-5"></i> Infografis
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-400 hover:text-white hover:bg-gray-800/50 transition-colors">
+                        <i class="fa-solid fa-gear w-5"></i> Pengaturan
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        
+        <div class="p-4 border-t border-gray-800">
+            <div class="flex items-center gap-3 px-3 py-2">
+                <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-purple-500 to-blue-500 flex items-center justify-center shadow-lg">
+                    <i class="fa-solid fa-user text-xs text-white"></i>
+                </div>
+                <div class="text-sm">
+                    <p class="font-medium text-white">Local User</p>
+                    <p class="text-xs text-green-400"><i class="fa-solid fa-bolt mr-1"></i>Offline Mode</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col h-full overflow-hidden relative">
+        <!-- Topbar -->
+        <header class="h-16 glass-panel border-b border-gray-800 flex items-center justify-between px-6 z-10 shrink-0">
+            <h2 class="font-semibold text-gray-200">Editor - Design Feeds</h2>
+            <div class="flex gap-3">
+                <button class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white bg-gray-800 hover:bg-gray-700 rounded-lg transition-colors border border-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600">
+                    <i class="fa-solid fa-floppy-disk mr-2"></i> Simpan Draf
+                </button>
+                <button id="btn-download" class="px-4 py-2 text-sm font-medium text-white bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-500 hover:to-blue-400 rounded-lg transition-colors shadow-lg shadow-blue-500/20 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <i class="fa-solid fa-download mr-2"></i> Ekspor PNG
+                </button>
+            </div>
+        </header>
+
+        <!-- Workspace -->
+        <div class="flex-1 flex overflow-hidden">
+            <!-- Left Panel: Input Form -->
+            <div class="w-96 glass-panel border-r border-gray-800 overflow-y-auto p-6 flex flex-col gap-6 shrink-0 custom-scrollbar">
+                
+                <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">Smart Generator</h3>
+                    <p class="text-xs text-gray-400 mb-4">Isi form di bawah untuk generate teks & desain instan.</p>
+                    
+                    <form id="generator-form" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Kategori / Niche</label>
+                            <select id="niche" class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                                <option value="fnb">Makanan & Minuman (F&B)</option>
+                                <option value="fashion">Fashion & Apparel</option>
+                                <option value="skincare">Skincare & Beauty</option>
+                                <option value="general">Umum / Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Nama Produk / Brand</label>
+                            <input type="text" id="product-name" placeholder="Cth: Kopi Susu Gula Aren" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Manfaat Utama</label>
+                            <input type="text" id="product-benefit" placeholder="Cth: semangat seharian" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Target Audiens</label>
+                            <input type="text" id="target-audience" placeholder="Cth: anak senja" required class="w-full bg-gray-900 border border-gray-700 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-blue-500 transition-colors">
+                        </div>
+
+                        <div class="pt-2 border-t border-gray-800">
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Foto Produk (Opsional)</label>
+                            <input type="file" id="product-image" accept="image/*" class="w-full text-sm text-gray-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-medium file:bg-gray-800 file:text-gray-300 hover:file:bg-gray-700 transition-colors cursor-pointer focus:outline-none">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-xs font-medium text-gray-400 mb-1">Warna Tema Latar</label>
+                            <div class="flex gap-2 items-center">
+                                <input type="color" id="bg-color" value="#0f172a" class="w-8 h-8 rounded cursor-pointer bg-transparent border-0 p-0 focus:outline-none">
+                                <span class="text-xs text-gray-500">Pilih warna dominan</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="w-full py-2.5 mt-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white rounded-lg text-sm font-semibold transition-all shadow-lg shadow-blue-500/25 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            <i class="fa-solid fa-bolt mr-1"></i> Generate Desain
+                        </button>
+                    </form>
+                </div>
+                
+                <div id="text-variations" class="mt-2 hidden">
+                    <h3 class="text-xs font-semibold text-gray-400 mb-3 uppercase tracking-wider flex items-center justify-between">
+                        Variasi Copywriting <span class="bg-gray-800 px-2 py-0.5 rounded text-[10px]">Klik untuk ubah</span>
+                    </h3>
+                    <div id="variations-container" class="space-y-3">
+                        <!-- Dynamic texts will be injected here -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: Live Canvas Preview -->
+            <div class="flex-1 bg-pattern relative flex flex-col items-center justify-center p-8 overflow-hidden bg-gray-950">
+                
+                <!-- Toolbar overlay for canvas -->
+                <div class="absolute top-6 flex gap-1.5 bg-gray-900/80 backdrop-blur border border-gray-700 p-1.5 rounded-xl z-20 shadow-xl">
+                    <button class="w-9 h-9 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none" title="Undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button class="w-9 h-9 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none" title="Redo"><i class="fa-solid fa-rotate-right"></i></button>
+                    <div class="w-px h-5 bg-gray-700 my-auto mx-1"></div>
+                    <button class="w-9 h-9 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none" title="Tambah Teks"><i class="fa-solid fa-t"></i></button>
+                    <button class="w-9 h-9 rounded-lg text-gray-400 hover:text-white hover:bg-gray-700 transition-colors focus:outline-none" title="Shapes"><i class="fa-solid fa-shapes"></i></button>
+                </div>
+
+                <!-- Canvas Container -->
+                <div id="canvas-wrapper" class="relative flex items-center justify-center shadow-2xl rounded-sm overflow-hidden border border-gray-800/50">
+                    <canvas id="design-canvas"></canvas>
+                </div>
+                
+                <p class="absolute bottom-6 text-xs text-gray-500 bg-gray-900/80 px-4 py-1.5 rounded-full backdrop-blur border border-gray-800 shadow-lg">
+                    <i class="fa-solid fa-crop-simple mr-1"></i> Preview Resolusi: 1080 x 1080 px (1:1)
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/copywriting-db.js"></script>
+    <script src="js/canvas-engine.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

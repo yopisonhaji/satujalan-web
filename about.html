@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami - SatuJalan IT Solutions</title>
+    <link rel="icon" href="favicon.webp" type="image/webp">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .page-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 4rem;
+        }
+
+        .about-text p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .vision-mission {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .vm-card {
+            padding: 2.5rem;
+            text-align: center;
+            border-top: 3px solid var(--primary);
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            text-align: center;
+            padding: 2rem;
+            transition: transform 0.3s;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .team-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--primary);
+            background: #e2e8f0;
+        }
+
+        .team-role {
+            color: var(--secondary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PCSRJJGN');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCSRJJGN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Background Elements -->
+    <div class="aesthetic-bg">
+        <div class="neon-ring ring-travel-1"></div>
+        <div class="neon-ring ring-travel-2"></div>
+    </div>
+    <div class="grid-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.webp" alt="SatuJalan Logo" class="logo-img">
+                <span class="logo-text">SATU<span class="highlight">JALAN</span></span>
+            </a>
+
+            <button class="mobile-toggle" id="mobile-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link active">Tentang Kami</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-btn-mobile">Hubungi Kami</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="page-header container">
+        <span class="section-tag" style="color: var(--secondary);">WHO WE ARE</span>
+        <h1 class="section-title">Mengenal <span class="highlight">SatuJalan</span></h1>
+        <p class="section-desc">Mitra teknologi terpercaya untuk solusi digital dan perbaikan perangkat Anda.</p>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container">
+        <!-- Company Story -->
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Lebih Dari Sekadar Jasa Servis</h3>
+                <p>SatuJalan didirikan dengan satu tujuan sederhana: memberikan solusi teknologi yang transparan, cepat,
+                    dan profesional di tengah maraknya layanan yang meragukan.</p>
+                <p>Kami memahami betapa pentingnya perangkat elektronik dan kehadiran digital bagi bisnis maupun
+                    kehidupan pribadi Anda. Oleh karena itu, kami menggabungkan keahlian teknis (hardware/software)
+                    dengan standar pelayanan premium.</p>
+                <p>Kini, SatuJalan telah berkembang menjadi one-stop solution untuk kebutuhan IT, mulai dari reparasi
+                    gadget hingga pengembangan sistem web enterprise.</p>
+            </div>
+            <div class="about-img glass-card" style="padding: 10px;">
+                <!-- Placeholder for team/working image -->
+                <div
+                    style="background: linear-gradient(45deg, #1e293b, #0f172a); width: 100%; height: 300px; border-radius: 15px; display: flex; align-items: center; justify-content: center;">
+                    <i class="fas fa-users" style="font-size: 5rem; color: rgba(255,255,255,0.1);"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- Vision & Mission -->
+        <div class="vision-mission">
+            <div class="vm-card glass-card">
+                <div class="card-icon"
+                    style="background: rgba(37,99,235,0.1); color: var(--primary); margin: 0 auto 1.5rem;"><i
+                        class="fas fa-eye"></i></div>
+                <h3>Visi Kami</h3>
+                <p>Menjadi penyedia solusi IT nomor satu di Indonesia yang dikenal karena integritas, kecepatan, dan
+                    kualitas inovasi.</p>
+            </div>
+            <div class="vm-card glass-card" style="border-top-color: var(--secondary);">
+                <div class="card-icon"
+                    style="background: rgba(220,38,38,0.1); color: var(--secondary); margin: 0 auto 1.5rem;"><i
+                        class="fas fa-rocket"></i></div>
+                <h3>Misi Kami</h3>
+                <p>Memberikan akses layanan teknologi yang mudah, edukatif, dan solutif bagi UMKM maupun individu
+                    profesional.</p>
+            </div>
+        </div>
+
+        <!-- Team -->
+        <div class="section-header center" style="margin-top: 6rem;">
+            <h2 class="section-title">Tim <span class="highlight-orange">Inti Kami</span></h2>
+        </div>
+
+        <div class="team-grid">
+            <div class="team-card glass-card">
+                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Yopi+S&background=2563EB&color=fff" alt="Yopi"
+                    class="team-img">
+                <h4>Yopi</h4>
+                <div class="team-role">Founder & Lead Developer</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Fullstack Developer dengan pengalaman 5+ tahun
+                    di industri tech.</p>
+            </div>
+            <div class="team-card glass-card">
+                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Rudi+H&background=DC2626&color=fff" alt="Rudi"
+                    class="team-img">
+                <h4>Rudi</h4>
+                <div class="team-role">Head of Hardware</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Spesialis perbaikan motherboard dan data
+                    recovery.</p>
+            </div>
+            <div class="team-card glass-card">
+                <img loading="lazy" decoding="async" src="https://ui-avatars.com/api/?name=Admin&background=10B981&color=fff" alt="Admin"
+                    class="team-img">
+                <h4>Tim Support</h4>
+                <div class="team-role">Customer Care</div>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Siap membantu penjadwalan dan konsultasi 24/7.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" style="margin-top: 6rem;">
+        <div class="container cta-container center">
+            <h2>Siap Berkolaborasi?</h2>
+            <p>Diskusikan kebutuhan teknologi Anda bersama kami.</p>
+            <a href="https://wa.me/6281515333370" class="btn btn-primary btn-lg pulse-anim">
+                <i class="fab fa-whatsapp"></i> <span>Hubungi Sekarang</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>SATU<span class="highlight">JALAN</span></h3>
+                <p>"One Way, All Solutions"</p>
+            </div>
+            <div class="footer-links">
+                <h4>Menu</h4>
+                <a href="about.html">Tentang Kami</a>
+                <a href="blog.html">Blog & Tutorial</a>
+                <a href="index.html#hardware">Servis</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fab fa-whatsapp"></i> 0815-1533-3370</p>
+                <p><i class="fas fa-map-marker-alt"></i> Jabodetabek Area</p>
+            </div>
+        </div>
+        <div class="footer-bottom center">
+            <p>&copy; 2026 SatuJalan. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</body>
+
+</html>

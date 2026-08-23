@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel - SatuJalan Blog</title>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+
+    <style>
+        :root {
+            --primary: #2563EB;
+            --secondary: #DC2626;
+            --bg-dark: #0f172a;
+            --surface: #1e293b;
+            --text: #f1f5f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Login Screen */
+        #login-screen {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: radial-gradient(circle at center, #1e293b 0%, #0f172a 100%);
+        }
+
+        .login-box {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #475569;
+            color: white;
+        }
+
+        .btn-danger {
+            background: var(--secondary);
+            color: white;
+        }
+
+        button:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        /* Dashboard */
+        #dashboard {
+            display: none;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .post-list {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .post-item {
+            background: var(--surface);
+            padding: 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .post-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--surface);
+            padding: 2rem;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 600px;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        label {
+            display: block;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+        }
+
+        .feedback {
+            display: none;
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            background: rgba(220, 38, 38, 0.2);
+            color: #fca5a5;
+            font-size: 0.9rem;
+        }
+    </style>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PCSRJJGN');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PCSRJJGN" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Login Screen -->
+    <div id="login-screen">
+        <div class="login-box">
+            <h2 style="margin-bottom: 1.5rem;">Admin Login</h2>
+            <div id="login-error" class="feedback">Username atau Password Salah!</div>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button class="btn-primary" style="width: 100%;" onclick="login()">Masuk</button>
+
+            <a href="index.html"
+                style="display: block; margin-top: 1rem; color: var(--primary); text-decoration: none;">Kembali ke
+                Website</a>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" class="container">
+        <div class="top-bar">
+            <div>
+                <h1>Dashboard Blog</h1>
+                <p style="color: #94a3b8;">Kelola artikel website SatuJalan.</p>
+            </div>
+            <div>
+                <button class="btn-primary" onclick="openModal()"><i class="fas fa-plus"></i> Tambah Artikel</button>
+                <button class="btn-secondary" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
+        </div>
+
+        <div id="posts-container" class="post-list">
+            <!-- Posts Injected Here -->
+        </div>
+    </div>
+
+    <!-- Edit/Add Modal -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Tambah Artikel</h2>
+            <form id="postForm" onsubmit="handleFormSubmit(event)">
+                <input type="hidden" id="postId">
+
+                <label>Judul Artikel</label>
+                <input type="text" id="title" required placeholder="Contoh: Tips Merawat Laptop">
+
+                <label>Sub-Judul (Deskripsi Singkat)</label>
+                <input type="text" id="subtitle" required placeholder="Ringkasan menarik...">
+
+                <label>Kategori</label>
+                <select id="category">
+                    <option value="Hardware">Hardware & Servis</option>
+                    <option value="Web Dev">Website & Digital</option>
+                    <option value="Info">Info Layanan</option>
+                </select>
+
+                <label>Penulis</label>
+                <input type="text" id="author" required placeholder="Nama Penulis">
+
+                <label>Gambar (Upload dari HP/Laptop)</label>
+                <input type="file" id="imageFile" accept="image/*" style="background: rgba(255,255,255,0.1);">
+
+                <label>Atau URL Gambar (Opsional)</label>
+                <input type="url" id="image" placeholder="https://...">
+
+                <label>Link Video (YouTube / MP4) - Opsional</label>
+                <input type="text" id="videoUrl" placeholder="Contoh: https://youtu.be/...">
+
+                <label>Konten (HTML Supported)</label>
+                <textarea id="content" rows="8" required
+                    placeholder="Tulis konten artikel di sini... (Bisa pakai tag <p>, <h3>, <ul>)"></textarea>
+
+                <div style="margin-top: 1.5rem; text-align: right;">
+                    <button type="button" class="btn-secondary" onclick="closeModal()">Batal</button>
+                    <button type="submit" class="btn-primary">Simpan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="blog.js" defer></script>
+    <script>
+        // Simple Auth Logic
+        function login() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+
+            if (user === 'satujalan' && pass === 'yopi213') {
+                document.getElementById('login-screen').style.display = 'none';
+                document.getElementById('dashboard').style.display = 'block';
+                loadPosts();
+            } else {
+                const err = document.getElementById('login-error');
+                err.style.display = 'block';
+                setTimeout(() => err.style.display = 'none', 3000);
+            }
+        }
+
+        function logout() {
+            location.reload();
+        }
+
+        // Dashboard Logic
+        function loadPosts() {
+            const posts = getPosts();
+            const container = document.getElementById('posts-container');
+
+            if (posts.length === 0) {
+                container.innerHTML = '<p style="text-align:center; color:#64748b;">Belum ada artikel.</p>';
+                return;
+            }
+
+            container.innerHTML = posts.map(post => `
+                <div class="post-item">
+                    <div class="post-info">
+                        <h3>${post.title}</h3>
+                        <div class="post-meta">
+                            <span class="badge" style="background:rgba(37,99,235,0.2); color:#60a5fa; padding:2px 8px; border-radius:4px;">${post.category}</span>
+                            • ${formatDate(post.date)} • ${post.author}
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button class="btn-secondary" onclick="editPost('${post.id}')"><i class="fas fa-edit"></i></button>
+                        <button class="btn-danger" onclick="confirmDelete('${post.id}')"><i class="fas fa-trash"></i></button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Modal Logic
+        const modal = document.getElementById('postModal');
+        const form = document.getElementById('postForm');
+
+        function openModal() {
+            form.reset();
+            document.getElementById('postId').value = '';
+            document.getElementById('modal-title').innerText = 'Tambah Artikel';
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function editPost(id) {
+            const post = getPostById(id);
+            if (!post) return;
+
+            document.getElementById('postId').value = post.id;
+            document.getElementById('title').value = post.title;
+            document.getElementById('subtitle').value = post.subtitle;
+            document.getElementById('category').value = post.category;
+            document.getElementById('author').value = post.author;
+            document.getElementById('image').value = post.image;
+            document.getElementById('videoUrl').value = post.video || ''; // Load Video URL
+            document.getElementById('content').value = post.content;
+
+            // Note: Cannot pre-fill file input due to browser security
+            document.getElementById('imageFile').value = '';
+
+            document.getElementById('modal-title').innerText = 'Edit Artikel';
+            modal.style.display = 'flex';
+        }
+
+        function confirmDelete(id) {
+            if (confirm('Yakin ingin menghapus artikel ini?')) {
+                deletePost(id);
+                loadPosts();
+            }
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const id = document.getElementById('postId').value;
+            const imageFile = document.getElementById('imageFile').files[0];
+            const imageUrl = document.getElementById('image').value;
+            const videoUrl = document.getElementById('videoUrl').value;
+
+            // Helper to process data
+            const processData = (finalImage) => {
+                const postData = {
+                    title: document.getElementById('title').value,
+                    subtitle: document.getElementById('subtitle').value,
+                    category: document.getElementById('category').value,
+                    author: document.getElementById('author').value,
+                    image: finalImage || 'https://via.placeholder.com/800x400', // Fallback
+                    video: videoUrl,
+                    content: document.getElementById('content').value
+                };
+
+                // Try saving
+                let result;
+                if (id) {
+                    result = updatePost(id, postData);
+                } else {
+                    result = addPost(postData);
+                }
+
+                if (result) {
+                    closeModal();
+                    loadPosts();
+                }
+            };
+
+            // Image Compression Helper
+            const compressImage = (file, callback) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = (event) => {
+                    const img = new Image();
+                    img.src = event.target.result;
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        const MAX_WIDTH = 800;
+                        const scaleSize = MAX_WIDTH / img.width;
+
+                        // Set new dimensions (maintain aspect ratio)
+                        if (img.width > MAX_WIDTH) {
+                            canvas.width = MAX_WIDTH;
+                            canvas.height = img.height * scaleSize;
+                        } else {
+                            canvas.width = img.width;
+                            canvas.height = img.height;
+                        }
+
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+
+                        // Compress to JPEG 0.7 quality
+                        const dataUrl = canvas.toDataURL('image/jpeg', 0.7);
+                        callback(dataUrl);
+                    }
+                }
+            };
+
+            // Handle Image Logic
+            if (imageFile) {
+                // Check if file is too big initially (> 5MB warn, but still try compress)
+                if (imageFile.size > 5 * 1024 * 1024) {
+                    alert('Gambar terlalu besar! Sedang mencoba mengompres...');
+                }
+
+                compressImage(imageFile, (compressedDataUrl) => {
+                    processData(compressedDataUrl);
+                });
+            } else {
+                processData(imageUrl); // Use URL or empty
+            }
+        }
+
+        // Disable closing on outside click (Explicitly)
+        window.onclick = null;
+    </script>
+</body>
+
+</html>

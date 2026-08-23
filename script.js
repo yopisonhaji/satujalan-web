@@ -1,14 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    // Loader - fast hide untuk LCP optimal
+    // Loader - Dinamis menunggu halaman siap sepenuhnya
     const loader = document.getElementById('loader');
     if (loader) {
-        setTimeout(() => {
-            loader.style.opacity = '0';
+        window.addEventListener('load', () => {
             setTimeout(() => {
-                loader.style.display = 'none';
-            }, 300);
-        }, 150); // Sangat cepat agar animasi terlihat namun tidak merusak skor LCP
+                loader.style.opacity = '0';
+                setTimeout(() => {
+                    loader.style.display = 'none';
+                }, 300);
+            }, 100); // Sedikit delay agar transisi mulus
+        });
     }
 
     // --- THEME TOGGLE (Dark/Light) ---

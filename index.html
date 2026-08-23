@@ -451,34 +451,6 @@
         <div class="neon-ring ring-travel-3"></div>
     </div>
     
-    <!-- SPLINE 3D IMMERSIVE BACKGROUND (Dinamis / Lazy Loaded agar skor PageSpeed 90+) -->
-    <div id="spline-container" style="position:fixed; top:0; left:0; width:100%; height:100%; z-index:0; opacity:0; transition: opacity 2s ease;"></div>
-    <script>
-        // Inject Spline setelah halaman selesai dimuat agar tidak merusak skor LCP & Performa
-        window.addEventListener('load', () => {
-            setTimeout(() => {
-                const splineContainer = document.getElementById('spline-container');
-                // Panggil library Spline Viewer (Vanilla JS, bukan React)
-                const script = document.createElement('script');
-                script.type = 'module';
-                script.src = 'https://unpkg.com/@splinetool/viewer@1.9.5/build/spline-viewer.js';
-                document.head.appendChild(script);
-
-                // Tambahkan elemen 3D (Keyboard IT / Abstract Tech scene)
-                const viewer = document.createElement('spline-viewer');
-                viewer.setAttribute('url', 'https://prod.spline.design/6Wq1Q7YGyM-iab9i/scene.splinecode');
-                viewer.style.width = '100%';
-                viewer.style.height = '100%';
-                splineContainer.appendChild(viewer);
-
-                // Fade In effect
-                setTimeout(() => {
-                    splineContainer.style.opacity = '1';
-                }, 1000);
-            }, 6000); // Tunda 6 detik untuk PageSpeed Insights
-        });
-    </script>
-
     <div class="grid-overlay"></div>
 
     <!-- Navigation -->

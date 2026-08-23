@@ -138,6 +138,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- 3D MOTION PARALLAX (Desktop Only) ---
+    const aestheticBg = document.querySelector('.aesthetic-bg');
+    
+    window.addEventListener('scroll', () => {
+        if (window.innerWidth > 768) {
+            const scrollY = window.scrollY;
+            
+            if (aestheticBg) {
+                // Background moves slower for deep depth effect
+                aestheticBg.style.transform = `translateY(${scrollY * 0.2}px) translateZ(0)`;
+            }
+        } else {
+            // Reset on mobile
+            if (aestheticBg) aestheticBg.style.transform = 'none';
+        }
+    }, { passive: true });
+
     // --- MODAL & BOOKING LOGIC ---
 
     const modal = document.getElementById('bookingModal');
@@ -580,17 +597,17 @@ Mohon diproses, terima kasih.`;
 
     // 1. Brand Logos (Hardware) -> Scroll Left
     const brandLogos = [
-        'logo acer.png', 'logo asus.png', 'logo dell.png',
-        'logo hp.png', 'logo iphone.png', 'logo lenovo.png',
-        'logo predator.png'
+        'logo acer.webp', 'logo asus.webp', 'logo dell.webp',
+        'logo hp.webp', 'logo iphone.webp', 'logo lenovo.webp',
+        'logo predator.webp'
     ];
     initMarquee('brand-marquee', brandLogos, 'logo brend');
 
     // 2. Code Logos (Software) -> Scroll Right
     const codeLogos = [
-        'logo html.png', 'logo js.png', 'logo microsoft .net.png',
-        'logo php.png', 'logo python.png', 'logo react js.png',
-        'logo vs code.png'
+        'logo html.webp', 'logo js.webp', 'logo microsoft .net.webp',
+        'logo php.webp', 'logo python.webp', 'logo react js.webp',
+        'logo vs code.webp'
     ];
     initMarquee('code-marquee', codeLogos, 'logo code');
 
@@ -826,201 +843,6 @@ Mohon diproses, terima kasih.`;
                 advancedGrid.classList.add('advanced-hidden');
 
                 // Wait for transition (0.5s) then hide display
-        'cta-title': { id: 'Butuh Bantuan Sekarang?', en: 'Need Help Now?' },
-        'cta-desc': { id: 'Teknisi kami siap meluncur ke lokasi Anda.', en: 'Our technicians are ready to dispatch to your location.' },
-        'cta-btn': { id: 'Chat WhatsApp Sekarang', en: 'Chat WhatsApp Now' },
-
-        // Portfolio
-        'port-tag': { id: 'PORTFOLIO', en: 'PORTFOLIO' },
-        'port-title': { id: 'Portofolio <span class="highlight-blue">Unggulan</span>', en: 'Featured <span class="highlight-blue">Portfolio</span>' },
-        'port-desc': { id: 'Bukti nyata dedikasi kami dalam menghadirkan solusi digital berkualitas tinggi.', en: 'Real proof of our dedication in delivering high-quality digital solutions.' }
-    };
-
-    if (langToggle) {
-        langToggle.addEventListener('click', () => {
-            // Toggle State
-            currentLang = currentLang === 'id' ? 'en' : 'id';
-
-            // Update Button
-            langToggle.textContent = currentLang === 'id' ? '🇺🇸 EN' : '🇮🇩 ID';
-
-            // Update Text
-            const elements = document.querySelectorAll('[data-lang]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-lang');
-                if (translations[key]) {
-                    // Check if content has HTML
-                    if (translations[key][currentLang].includes('<')) {
-                        el.innerHTML = translations[key][currentLang];
-                    } else {
-                        el.textContent = translations[key][currentLang];
-                    }
-                }
-            });
-        });
-    }
-
-
-    // --- TESTIMONIAL MARQUEE LOGIC ---
-    // --- TESTIMONIAL SLIDER LOGIC (Auto-Scroll + Swipe) ---
-    const testimonialTrack = document.getElementById('testimonial-track');
-    if (testimonialTrack) {
-        // Clone items for infinite scroll effect
-        const items = testimonialTrack.innerHTML;
-        testimonialTrack.innerHTML = items + items;
-
-        let scrollAmount = 0;
-        let scrollSpeed = 1; // Pixels per tick
-        let isPaused = false;
-        let autoScroll;
-
-        const startAutoScroll = () => {
-            autoScroll = setInterval(() => {
-                if (!isPaused) {
-                    testimonialTrack.scrollLeft += scrollSpeed;
-
-                    // Infinite Loop Logic
-                    // If we scrolled past half the width (original content width), reset to 0
-                    if (testimonialTrack.scrollLeft >= (testimonialTrack.scrollWidth / 2)) {
-                        testimonialTrack.scrollLeft = 0;
-                    }
-                }
-            }, 20); // 50fps
-        };
-
-        // Initialize
-        startAutoScroll();
-
-        // Pause on Hover / Touch
-        testimonialTrack.addEventListener('mouseenter', () => isPaused = true);
-        testimonialTrack.addEventListener('mouseleave', () => isPaused = false);
-        testimonialTrack.addEventListener('touchstart', () => isPaused = true);
-        testimonialTrack.addEventListener('touchend', () => {
-            setTimeout(() => isPaused = false, 1000); // Wait a bit before resuming
-        });
-
-        // Optional: Manual Drag (Mouse)
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        testimonialTrack.addEventListener('mousedown', (e) => {
-            isPaused = true;
-            isDown = true;
-            testimonialTrack.classList.add('active'); // Add grabbing cursor class if valid
-            startX = e.pageX - testimonialTrack.offsetLeft;
-            scrollLeft = testimonialTrack.scrollLeft;
-        });
-
-        testimonialTrack.addEventListener('mouseleave', () => {
-            isDown = false;
-            isPaused = false;
-            testimonialTrack.classList.remove('active');
-        });
-
-        testimonialTrack.addEventListener('mouseup', () => {
-            isDown = false;
-            isPaused = false; // Will be handled by mouseleave usually, but good fallback
-            testimonialTrack.classList.remove('active');
-        });
-
-        testimonialTrack.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - testimonialTrack.offsetLeft;
-            const walk = (x - startX) * 2; // Scroll-fast
-            testimonialTrack.scrollLeft = scrollLeft - walk;
-        });
-    }
-
-    // --- PORTFOLIO LOGIC ---
-
-    // 1. Filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Remove active class from all
-            filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active to click
-            btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            portfolioItems.forEach(item => {
-                if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-                    item.classList.remove('hide');
-                    item.classList.add('show');
-                } else {
-                    item.classList.remove('show');
-                    item.classList.add('hide');
-                }
-            });
-        });
-    });
-
-    // 2. Lightbox
-    const portfolioModal = document.getElementById('portfolioModal');
-    const lightboxImg = document.getElementById('lightboxImg');
-    const captionText = document.getElementById('caption');
-    const closeLightbox = document.querySelector('.close-lightbox');
-
-    portfolioItems.forEach(item => {
-        item.addEventListener('click', () => {
-            const img = item.querySelector('img');
-            const h4 = item.querySelector('h4');
-            const p = item.querySelector('p');
-
-            portfolioModal.style.display = "block";
-            lightboxImg.src = img.src;
-            captionText.innerHTML = `<strong>${h4.innerText}</strong><br>${p.innerText}`;
-        });
-    });
-
-    if (closeLightbox) {
-        closeLightbox.addEventListener('click', () => {
-            portfolioModal.style.display = "none";
-        });
-    }
-
-    // Close lightbox when clicking outside image
-    if (portfolioModal) {
-        portfolioModal.addEventListener('click', (e) => {
-            if (e.target === portfolioModal) {
-                portfolioModal.style.display = "none";
-            }
-        });
-    }
-
-
-    // --- ADVANCED PRICING TOGGLE ---
-    const toggleAdvancedBtn = document.getElementById('toggle-advanced-btn');
-    const advancedGrid = document.getElementById('advanced-pricing-grid');
-
-    if (toggleAdvancedBtn && advancedGrid) {
-        toggleAdvancedBtn.addEventListener('click', () => {
-            // Check current visual state
-            const isHidden = window.getComputedStyle(advancedGrid).display === 'none';
-
-            if (isHidden) {
-                // Show
-                advancedGrid.style.display = 'grid';
-                // Trigger reflow for transition
-                void advancedGrid.offsetWidth;
-
-                advancedGrid.classList.remove('advanced-hidden');
-                advancedGrid.classList.add('advanced-visible');
-
-                // Update Button
-                toggleAdvancedBtn.innerHTML = '<i class="fas fa-chevron-up"></i> Tampilkan Lebih Sedikit';
-            } else {
-                // Hide
-                advancedGrid.classList.remove('advanced-visible');
-                // Re-add hidden class for opacity transition
-                advancedGrid.classList.add('advanced-hidden');
-
-                // Wait for transition (0.5s) then hide display
                 setTimeout(() => {
                     advancedGrid.style.display = 'none';
                 }, 500);
@@ -1030,28 +852,5 @@ Mohon diproses, terima kasih.`;
             }
         });
     }
-
-    // --- 3D MOTION PARALLAX (Desktop Only) ---
-    const splineContainer = document.getElementById('spline-container');
-    const aestheticBg = document.querySelector('.aesthetic-bg');
-    
-    window.addEventListener('scroll', () => {
-        if (window.innerWidth > 768) {
-            const scrollY = window.scrollY;
-            
-            if (splineContainer) {
-                // Parallax 3D effect - moves slower than user scroll
-                splineContainer.style.transform = `translateY(${scrollY * 0.4}px) translateZ(0)`;
-            }
-            if (aestheticBg) {
-                // Background moves even slower for deep depth effect
-                aestheticBg.style.transform = `translateY(${scrollY * 0.2}px) translateZ(0)`;
-            }
-        } else {
-            // Reset on mobile
-            if (splineContainer) splineContainer.style.transform = 'none';
-            if (aestheticBg) aestheticBg.style.transform = 'none';
-        }
-    }, { passive: true });
 
 });

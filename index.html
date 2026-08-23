@@ -398,8 +398,8 @@
     </style>
 
     <!-- style.css dimuat ASYNC (non-blocking) -->
-    <link rel="preload" href="style.css?v=3" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css?v=3"></noscript>
+    <link rel="preload" href="style.css?v=4" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css?v=4"></noscript>
 
     <!-- Swiper CSS - non-blocking -->
     <link rel="preload" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -410,7 +410,9 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Google Fonts: display=swap untuk render font lebih cepat -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- Font dimuat ASYNC untuk skor FCP/LCP < 1 detik -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"></noscript>
 
 
     <!-- Google Tag Manager - delayed for PageSpeed Insights -->
@@ -1755,7 +1757,7 @@
         <span>Hubungi Kami</span>
     </a>
 
-    <script src="script.js?v=3" defer></script>
+    <script src="script.js?v=4" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 
     <!-- Initialize Swiper (defer - runs after DOM + deferred scripts are ready) -->

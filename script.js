@@ -1,5 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+    // Loader - fast hide untuk LCP optimal
+    const loader = document.getElementById('loader');
+    if (loader) {
+        setTimeout(() => {
+            loader.style.opacity = '0';
+            setTimeout(() => {
+                loader.style.display = 'none';
+            }, 300);
+        }, 150); // Sangat cepat agar animasi terlihat namun tidak merusak skor LCP
+    }
 
     // --- THEME TOGGLE (Dark/Light) ---
     const themeToggle = document.getElementById('theme-toggle');

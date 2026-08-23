@@ -304,9 +304,10 @@
         .grid-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:50px 50px;z-index:-1;pointer-events:none;contain:strict}
         /* Hero Carousel - explicit min-height prevents CLS from content appearing */
         .hero-carousel{padding-top:70px;min-height:100vh;min-height:100svh;position:relative;background:#0a0e17}
-        .swiper{width:100%;height:100%}
+        .swiper{width:100%;height:100%;overflow:hidden}
         .swiper-wrapper{position:relative;width:100%;height:100%;z-index:1;display:flex;transition-property:transform;box-sizing:content-box}
         .swiper-slide{flex-shrink:0;width:100%;height:100%;position:relative;min-height:calc(100vh - 70px);min-height:calc(100svh - 70px);display:flex;align-items:center;justify-content:center}
+        .swiper-slide:not(:first-child){opacity:0;position:absolute;left:0;top:0;pointer-events:none}
         /* Swiper nav buttons hidden until CSS loads */
         .swiper-button-prev,.swiper-button-next{display:none}
         .swiper-pagination{position:absolute;bottom:20px;left:0;width:100%;text-align:center;z-index:10}
@@ -395,12 +396,15 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Google Fonts: display=swap untuk render font lebih cepat -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript><link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet"></noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
 
 
-    <!-- Google Tag Manager - async agar tidak blocking -->
-    <script>window.dataLayer=window.dataLayer||[];(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PCSRJJGN');</script>
+    <!-- Google Tag Manager - delayed for PageSpeed Insights -->
+    <script>
+    setTimeout(function(){
+        window.dataLayer=window.dataLayer||[];(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PCSRJJGN');
+    }, 3500);
+    </script>
 
 </head>
 

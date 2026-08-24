@@ -59,5 +59,28 @@ Optimalisasi tingkat keterbacaan teks yang sebelumnya sulit dibaca saat berada d
 - **Global CSS Variables:** Melakukan sentralisasi kode warna menggunakan CSS Variables di `style.css`.
 - **Penghapusan Hardcode Color:** Menghapus pewarnaan *hardcode* di dalam `blog.html` dan `article.html` yang sebelumnya memaksa font menjadi putih (sehingga tak terlihat di latar belakang putih). Teks sekarang otomatis mengikuti warna mode yang sedang aktif.
 
+## 4. Pembaruan UI/UX Terminal Prompt & Mode Editor (My Design Studio)
+Penyempurnaan signifikan pada struktur dan layout mode interaktif (Design SJ, Ads Typography, dll).
+
+### Flowchart Perbaikan UI Mode Editor
+```mermaid
+graph TD
+    A[User Pilih Menu Mode] --> B[State 'mode' Berubah]
+    B --> C[Merender Dynamic Wireframe & Form Editor]
+    C --> D{Apakah Mode Sama?}
+    D -->|Ya| E[Render Form Terpadu A, B, C]
+    D -->|Tidak| F[Render Spesifik Mode]
+    E --> G[Render Global Section D]
+    F --> G
+    G --> H[Generate Advanced JSON Prompt]
+```
+
+**Perbaikan Teknis yang Dilakukan:**
+- **Dynamic Wireframe Canvas:** Mengganti *mockup wireframe* yang statis menjadi dinamis (`renderWireframe`) yang selalu menyesuaikan dengan input mode dari user (Visual Placement, Aspect Ratio, dll).
+- **Refactoring & Redundansi Kode:** Menghapus sekitar 400+ baris kode redundan (duplikat form "A. Informasi Brand", "B. Fitur", "C. Layout") yang tumpang tindih untuk `mode === 'design-feeds'`.
+- **Penggabungan State UI:** Menyatukan logika form UI antara **Ads Typography** dan **Design SJ** agar menggunakan blok interaktif yang sama persis dan elegan, menghasilkan konsistensi tampilan tanpa adanya kolom ganda.
+- **Perbaikan JSON Generator:** Memperbaiki variabel di fungsi `generatePrompt` agar merujuk pada `state` terbaru (`brandName`, `hook`) sehingga *prompt output* sesuai dengan isian user.
+- **Scroll UX:** Memperbaiki masalah *overflow* dan batas tinggi layar, memastikan seluruh tombol *Generate* dan *Copy JSON* tetap mudah diakses.
+
 > [!TIP]
-> **Status:** Semua kode dari 3 pembaruan besar di atas **telah selesai di-deploy** dan berstatus *LIVE* di server Vercel/Cloudflare (berada di branch `main` repositori GitHub).
+> **Status:** Semua kode dari 4 pembaruan besar di atas **telah selesai di-deploy** dan berstatus *LIVE* di server Vercel/Cloudflare (berada di branch `main` repositori GitHub).

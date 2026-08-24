@@ -149,7 +149,7 @@ const defaultPosts = [
         date: '2026-08-24T09:00:00.000Z',
         createdAt: '2026-08-24T09:00:00.000Z',
         author: 'Admin',
-        category: 'Tutorial',
+        category: 'Extension Browser',
         views: 0,
         likes: 0,
         dislikes: 0,
@@ -170,6 +170,12 @@ function initBlog() {
             if (typeof p.likes === 'object') { p.likes = 0; updated = true; }
             if (typeof p.dislikes === 'object') { p.dislikes = 0; updated = true; }
             if (typeof p.views === 'object') { p.views = 0; updated = true; }
+            
+            // Migrate Category for ID 3
+            if (p.id === '3' && p.category === 'Tutorial') {
+                p.category = 'Extension Browser';
+                updated = true;
+            }
 
             if (!p.createdAt) {
                 p.createdAt = new Date().toISOString();

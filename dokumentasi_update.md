@@ -82,5 +82,13 @@ graph TD
 - **Perbaikan JSON Generator:** Memperbaiki variabel di fungsi `generatePrompt` agar merujuk pada `state` terbaru (`brandName`, `hook`) sehingga *prompt output* sesuai dengan isian user.
 - **Scroll UX:** Memperbaiki masalah *overflow* dan batas tinggi layar, memastikan seluruh tombol *Generate* dan *Copy JSON* tetap mudah diakses.
 
+## 5. Perbaikan Integrasi Vercel & Koreksi Penamaan Menu
+Menyelesaikan masalah *build deployment* yang terhambat akibat miskonfigurasi struktur repositori Git.
+
+**Perbaikan Teknis yang Dilakukan:**
+- **Resolusi Git Submodule (Gitlink):** Menghapus struktur `.git` mandiri di dalam folder `my-design-studio/frontend` yang sebelumnya menyebabkan Vercel gagal menarik (*pull*) data kode terbaru karena terdeteksi sebagai *submodule* kosong. Folder frontend kini diintegrasikan penuh ke dalam *root repository* `satujalan-web`.
+- **Resolusi TypeScript Build:** Memperbaiki *type error* pada komponen `MagneticButton.tsx` (mengganti pewarisan tipe menjadi `HTMLMotionProps<"button">` dari `framer-motion`) agar proses kompilasi Next.js di *server production* berjalan mulus tanpa hambatan.
+- **Koreksi Copywriting Menu:** Merevisi teks navigasi *dropdown* Produk Kami pada halaman statis (`index.html`, `index_en.html`, `index_ar.html`) dari "SJ IMAGE" (atau "SJ Disen Design") menjadi **SJ Design** agar seragam dengan identitas baru aplikasi.
+
 > [!TIP]
-> **Status:** Semua kode dari 4 pembaruan besar di atas **telah selesai di-deploy** dan berstatus *LIVE* di server Vercel/Cloudflare (berada di branch `main` repositori GitHub).
+> **Status Akhir:** Seluruh kode dari 5 rangkaian pembaruan besar di atas **telah 100% selesai di-deploy** dan berstatus *LIVE* di server Vercel/Cloudflare (berada di branch `main` repositori GitHub).

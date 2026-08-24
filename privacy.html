@@ -111,6 +111,19 @@
             </button>
 
             <ul class="nav-menu" id="nav-menu">
+                <!-- Language selector - always at top in mobile -->
+                <li class="nav-item nav-lang-top">
+                    <div class="lang-dropdown-wrapper">
+                        <button class="lang-toggle-btn" id="lang-toggle-btn" title="Pilih Bahasa" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span class="lang-label">Bahasa</span>
+                        </button>
+                        <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+                            <a href="index.html" class="lang-option active">🇮🇩 Bahasa Indonesia</a>
+                            <a href="index_en.html" class="lang-option">🇺🇸 English</a>
+                            <a href="index_ar.html" class="lang-option">🇸🇦 العربية</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="index.html#home" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="index.html#hardware" class="nav-link">Hardware</a></li>
                 <li class="nav-item"><a href="index.html#software" class="nav-link">Software</a></li>
@@ -118,7 +131,14 @@
                 <li class="nav-item"><a
                         href="https://wa.me/6281515333370?text=Assallamualaikum%20Admin%0ANama%20%3A%0ASaya%20ingin%20..."
                         class="nav-btn-mobile">Hubungi Kami</a></li>
-            </ul>
+            
+                <!-- Theme toggle - always at bottom in mobile -->
+                <li class="nav-item nav-theme-bottom">
+                    <button id="theme-toggle" class="theme-toggle-btn" title="Ganti Tema" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i> <span class="theme-label">Tema Gelap/Terang</span>
+                    </button>
+                </li>
+</ul>
         </div>
     </nav>
 

@@ -61,8 +61,8 @@
         }
 
         .blog-card {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: var(--bg-card);
+            border: var(--glass-border);
             border-radius: 16px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
@@ -108,12 +108,12 @@
         .blog-title {
             font-size: 1.25rem;
             margin-bottom: 0.5rem;
-            color: white;
+            color: var(--text-main);
             line-height: 1.4;
         }
 
         .blog-desc {
-            color: #94a3b8;
+            color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.6;
             margin-bottom: 1.5rem;
@@ -191,11 +191,31 @@
             </button>
 
             <ul class="nav-menu" id="nav-menu">
+                <!-- Language selector - always at top in mobile -->
+                <li class="nav-item nav-lang-top">
+                    <div class="lang-dropdown-wrapper">
+                        <button class="lang-toggle-btn" id="lang-toggle-btn" title="Pilih Bahasa" aria-label="Select language">
+                            <i class="fas fa-globe"></i> <span class="lang-label">Bahasa</span>
+                        </button>
+                        <div class="lang-dropdown-menu" id="lang-dropdown-menu">
+                            <a href="index.html" class="lang-option active">🇮🇩 Bahasa Indonesia</a>
+                            <a href="index_en.html" class="lang-option">🇺🇸 English</a>
+                            <a href="index_ar.html" class="lang-option">🇸🇦 العربية</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="index.html" class="nav-link">Beranda</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">Tentang Kami</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link active">Blog</a></li>
                 <li class="nav-item"><a href="index.html#contact" class="nav-btn-mobile">Hubungi Kami</a></li>
-            </ul>
+            
+                <!-- Theme toggle - always at bottom in mobile -->
+                <li class="nav-item nav-theme-bottom">
+                    <button id="theme-toggle" class="theme-toggle-btn" title="Ganti Tema" aria-label="Toggle theme">
+                        <i class="fas fa-sun"></i> <span class="theme-label">Tema Gelap/Terang</span>
+                    </button>
+                </li>
+</ul>
         </div>
     </nav>
 
@@ -257,7 +277,13 @@
         function filterPosts(category, sort = 'newest') {
             // Update active chip UI
             document.querySelectorAll('.filter-chip').forEach(chip => chip.classList.remove('active'));
-            event.target.classList.add('active');
+            if (window.event && window.event.target && window.event.target.classList) {
+                window.event.target.classList.add('active');
+            } else {
+                // If called programmatically, active the first chip or based on category
+                const chips = document.querySelectorAll('.filter-chip');
+                if (chips.length > 0) chips[0].classList.add('active');
+            }
 
             renderPosts(category, sort);
         }
@@ -294,14 +320,7 @@
             `).join('');
         }
 
-        function filterPosts(cat) {
-            // UI Update
-            document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
-            event.target.classList.add('active');
 
-            // Logic
-            renderPosts(cat);
-        }
     </script>
 </body>
 

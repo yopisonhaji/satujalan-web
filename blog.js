@@ -58,6 +58,102 @@ const defaultPosts = [
         likes: 5,
         dislikes: 0,
         comments: []
+    },
+    {
+        id: '3',
+        title: 'Cara Instal YouTube Downloader via Addoncrop & CRXEmulator',
+        subtitle: 'Panduan bypass pasang ekstensi yang diblokir oleh Chrome Web Store.',
+        content: `
+            <p>Secara sederhana, gabungan dari kedua layanan tersebut berfungsi sebagai <strong>jalur alternatif (bypass) untuk memasang ekstensi browser yang diblokir oleh toko resmi (seperti Google Chrome Web Store).</strong></p>
+            
+            <p>Berikut adalah penjelasan fungsi masing-masing dan bagaimana keduanya bekerja sama:</p>
+            
+            <h3>1. Fungsi Addoncrop</h3>
+            <p>Addoncrop adalah platform penyedia ekstensi <em>browser</em> pihak ketiga.</p>
+            <ul>
+                <li><strong>Fitur Utama:</strong> Mereka sangat terkenal dengan ekstensi <strong>YouTube Video Downloader</strong>.</li>
+                <li><strong>Kendala:</strong> Karena kebijakan Google melarang keras adanya ekstensi yang bisa mengunduh video dari YouTube, ekstensi milik Addoncrop ini dihapus dan tidak bisa ditemukan di Chrome Web Store resmi.</li>
+            </ul>
+            
+            <h3>2. Fungsi CRXEmulator</h3>
+            <p>CRXEmulator (atau alat serupa seperti Foxified) bertindak sebagai "mesin virtual" atau jembatan pemasang untuk ekstensi <em>browser</em>.</p>
+            <ul>
+                <li><strong>Membaca File CRX:</strong> Ekstensi Chrome memiliki format file <code>.crx</code>. Browser biasanya menolak menginstal file <code>.crx</code> yang diunduh dari luar toko resmi dengan alasan keamanan.</li>
+                <li><strong>Manipulasi Sistem:</strong> Emulator ini berfungsi untuk menipu <em>browser</em> agar mau menerima, membaca, dan menjalankan skrip dari file <code>.crx</code> pihak ketiga tersebut tanpa memunculkan peringatan keamanan (<em>error</em> atau <em>blocked</em>).</li>
+            </ul>
+            
+            <hr />
+            
+            <h3>3. Fungsi Gabungan (Alur Kerja)</h3>
+            <p>Jika digabungkan, alur kerjanya menjadi sebuah sistem instalasi yang mulus untuk alat pengunduh video:</p>
+            <ol>
+                <li>Pengguna ingin memasang pengunduh video YouTube dari <strong>Addoncrop</strong>.</li>
+                <li>Karena tidak ada di Chrome Web Store, pengguna menginstal <strong>CRXEmulator</strong> terlebih dahulu (yang biasanya memiliki izin resmi di toko ekstensi).</li>
+                <li>Addoncrop kemudian mengirimkan file berekstensi <code>.crx</code> miliknya ke dalam browser.</li>
+                <li><strong>CRXEmulator menangkap file tersebut</strong> dan mengeksekusinya.</li>
+                <li><strong>Hasil Akhir:</strong> Ekstensi pengunduh video Addoncrop berhasil terpasang dan tombol <em>download</em> akan muncul di bawah setiap video YouTube yang diputar, seolah-olah ekstensi tersebut diinstal secara normal.</li>
+            </ol>
+            <p>Singkatnya, <strong>CRXEmulator adalah "kendaraan" yang digunakan oleh Addoncrop agar alat pengunduhnya bisa menyusup dan bekerja di dalam browser pengguna.</strong></p>
+            
+            <hr />
+            
+            <h3>Cara Pemasangan Addoncrop menggunakan Emulator</h3>
+            <p>Berikut adalah panduan lengkap dan mudah untuk memasang Addoncrop menggunakan bantuan Emulator (Foxified/Crosspilot) di browser Google Chrome atau Microsoft Edge:</p>
+            
+            <h4>Langkah 1: Proses Instalasi CRXEmulator</h4>
+            <p>Agar Addoncrop dapat berjalan, Anda <strong>wajib</strong> memasang CRXEmulator terlebih dahulu sebagai jembatannya. Silakan klik tombol <strong>biru</strong> ini untuk menginstal:</p>
+            <div style="margin: 20px 0;">
+                <a href="https://crxemulator.com/welcome" target="_blank" style="display: inline-block; background-color: #3b82f6; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.5); text-transform: uppercase;">
+                    <i class="fas fa-plug"></i> Install CRXEmulator
+                </a>
+            </div>
+            <ol>
+                <li>Buka browser Google Chrome di komputer Anda.</li>
+                <li>Setelah mengklik tombol biru di atas, Anda mungkin diarahkan ke halaman Chrome Web Store.</li>
+                <li>Klik tombol bertuliskan "Add to Chrome" (Tambahkan ke Chrome).</li>
+                <li>Jika muncul kotak peringatan kecil, klik "Add extension" (Tambahkan Ekstensi). Tunggu hingga terpasang.</li>
+            </ol>
+            
+            <h4>Langkah 2: Download YouTube Downloader via Addoncrop</h4>
+            <p>Setelah emulator berhasil terpasang, langkah selanjutnya adalah mengunduh alat pengunduh videonya. Klik tombol <strong>orange</strong> di bawah ini:</p>
+            <div style="margin: 20px 0;">
+                <a href="https://addoncrop.com/v34/" target="_blank" style="display: inline-block; background-color: #f97316; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(249, 115, 22, 0.5); text-transform: uppercase;">
+                    <i class="fas fa-download"></i> Download Addoncrop di Sini
+                </a>
+            </div>
+            <p>Di halaman web Addoncrop, cari dan klik tombol untuk memasang ekstensi (biasanya bertuliskan "Install via CRXEmulator" atau semacamnya).</p>
+            
+            <h4>Langkah 3: Berikan Izin Skrip Addoncrop</h4>
+            <p>Inilah momen di mana Emulator bekerja memasukkan sistem Addoncrop ke dalam browser.</p>
+            <ol>
+                <li>Setelah emulator terpasang, browser biasanya akan otomatis membuka tab baru dari Addoncrop.</li>
+                <li>Di layar tersebut, akan muncul permintaan izin (Permissions) untuk memasang skrip YouTube Downloader.</li>
+                <li>Klik tombol "Grant Permissions" atau "Allow" (Izinkan).</li>
+                <li>Selesai! Sistem pengunduh video sudah berhasil disusupkan ke dalam browser.</li>
+            </ol>
+            
+            <h4>Langkah 4: Cara Mengunduh Video YouTube</h4>
+            <p>Sekarang waktunya mencoba apakah alatnya sudah bekerja:</p>
+            <ol>
+                <li>Buka situs <a href="https://www.youtube.com/" target="_blank">YouTube</a> dan putar video apa saja.</li>
+                <li>Perhatikan area di bawah pemutar video (di barisan tombol Like, Dislike, Share).</li>
+                <li>Anda akan melihat ada tombol baru bergambar Kamera / Download.</li>
+                <li>Klik tombol tersebut. Akan muncul daftar pilihan resolusi (mulai dari 360p, 720p, 1080p, hingga 4K), dan bahkan ada pilihan untuk mengunduh format MP3 jika hanya ingin mengambil audionya saja.</li>
+                <li>Klik kualitas yang diinginkan, dan video akan langsung terunduh ke ruang penyimpanan lokal.</li>
+            </ol>
+            
+            <p><strong>Catatan Penting:</strong> Terkadang, karena ini bukan fitur resmi Google, tombol tersebut bisa hilang jika YouTube memperbarui tampilan situs webnya. Jika itu terjadi, cukup tunggu beberapa hari, sistem ekstensi ini biasanya akan melakukan pembaruan otomatis di latar belakang.</p>
+        `,
+        image: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+        video: '',
+        date: '2026-08-24T09:00:00.000Z',
+        createdAt: '2026-08-24T09:00:00.000Z',
+        author: 'Admin',
+        category: 'Tutorial',
+        views: 0,
+        likes: 0,
+        dislikes: 0,
+        comments: []
     }
 ];
 
@@ -89,7 +185,25 @@ function initBlog() {
     }
 }
 
-// ... existing code ...
+function getPosts(sort = 'newest') {
+    initBlog();
+    let posts = JSON.parse(localStorage.getItem(BLOG_STORAGE_KEY)) || [];
+    
+    if (sort === 'newest') {
+        posts.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+    } else if (sort === 'popular') {
+        posts.sort((a, b) => (b.views || 0) - (a.views || 0));
+    } else if (sort === 'oldest') {
+        posts.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    }
+    return posts;
+}
+
+function getPostById(id) {
+    initBlog();
+    const posts = JSON.parse(localStorage.getItem(BLOG_STORAGE_KEY)) || [];
+    return posts.find(p => p.id === id);
+}
 
 // --- Engagement Functions ---
 

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="id">
 
 <head>
@@ -13,20 +13,20 @@
     <!-- Google / Search Engine Tags -->
     <meta itemprop="name" content="Artikel Teknologi - SatuJalan IT Solutions">
     <meta itemprop="description" content="Baca artikel terbaru dari SatuJalan IT Solutions seputar perkembangan teknologi terkini.">
-    <meta itemprop="image" content="https://www.satujalan.id/logo.webp">
+    <meta itemprop="image" content="https://www.satujalan.id/logo.png">
 
     <!-- Facebook Meta Tags -->
     <meta property="og:url" content="https://www.satujalan.id/article.html">
     <meta property="og:type" content="article">
     <meta property="og:title" content="Artikel Teknologi - SatuJalan IT Solutions">
     <meta property="og:description" content="Baca artikel terbaru dari SatuJalan IT Solutions seputar perkembangan teknologi terkini.">
-    <meta property="og:image" content="https://www.satujalan.id/logo.webp">
+    <meta property="og:image" content="https://www.satujalan.id/logo.png">
 
     <!-- Twitter Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Artikel Teknologi - SatuJalan IT Solutions">
     <meta name="twitter:description" content="Baca artikel terbaru dari SatuJalan IT Solutions seputar perkembangan teknologi terkini.">
-    <meta name="twitter:image" content="https://www.satujalan.id/logo.webp">
+    <meta name="twitter:image" content="https://www.satujalan.id/logo.png">
     <link rel="icon" href="favicon.webp" type="image/webp">
 
     <!-- Fonts -->
@@ -221,9 +221,9 @@
                 <header class="article-header">
                     <div class="article-meta">
                         <span style="color: var(--secondary); font-weight: 700;">${post.category}</span>
-                        <span style="margin: 0 10px;">•</span>
+                        <span style="margin: 0 10px;">â€¢</span>
                         <span>${formatDate(post.date)}</span>
-                        <span style="margin: 0 10px;">•</span>
+                        <span style="margin: 0 10px;">â€¢</span>
                         <span>Oleh ${post.author}</span>
                     </div>
                     <h1 class="article-title">${post.title}</h1>
@@ -293,7 +293,7 @@
                     <div id="commentList">
                         ${post.comments ? post.comments.map(c => `
                             <div style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
-                                <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${c.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">• ${timeAgo(c.date)}</span></div>
+                                <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${c.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">â€¢ ${timeAgo(c.date)}</span></div>
                                 <p style="color: #cbd5e1;">${c.text}</p>
                             </div>
                         `).join('') : ''}
@@ -344,7 +344,7 @@
                     const list = document.getElementById('commentList');
                     const html = `
                         <div style="margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
-                            <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${newComment.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">• Baru saja</span></div>
+                            <div style="font-weight: bold; color: var(--secondary); margin-bottom: 5px;">${newComment.name} <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">â€¢ Baru saja</span></div>
                             <p style="color: #cbd5e1;">${newComment.text}</p>
                         </div>
                     `;

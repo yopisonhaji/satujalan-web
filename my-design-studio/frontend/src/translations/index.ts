@@ -72,13 +72,13 @@ export const translations = {
     sidebar: {
       storyboard: "Video Storyboard",
       logo: "Logo",
-      grid9: "Consistent 9-Grid",
+      grid9: "Consistent 9 SJ",
       ads: "Typography Ads",
       youtube: "YouTube Thumbnail",
       review: "Affiliate Product Review",
       tryon: "Product Try-On",
-      carousel: "Carousel Feeds",
-      designFeeds: "Design Feeds",
+      carousel: "Carousel SJ",
+      designFeeds: "Design SJ",
       fnb: "F&B Menu",
       settings: "Settings"
     },
@@ -141,13 +141,13 @@ export const translations = {
     sidebar: {
       storyboard: "لوحة العمل للفيديو",
       logo: "شعار",
-      grid9: "شبكة 9 متناسقة",
+      grid9: "9 SJ شبكة",
       ads: "إعلانات الطباعة",
       youtube: "صورة يوتيوب المصغرة",
       review: "مراجعة منتج التابع",
       tryon: "تجربة المنتج",
-      carousel: "منشورات دائرية",
-      designFeeds: "تصميم المنشورات",
+      carousel: "SJ منشورات",
+      designFeeds: "SJ تصميم",
       fnb: "قائمة طعام ومشروبات",
       settings: "الإعدادات"
     },

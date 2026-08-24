@@ -85,7 +85,19 @@ graph TD
 ## 5. Perbaikan Integrasi Vercel & Koreksi Penamaan Menu
 Menyelesaikan masalah *build deployment* yang terhambat akibat miskonfigurasi struktur repositori Git serta asinkronisasi terjemahan.
 
-**Perbaikan Teknis yang Dilakukan:**
+### Flowchart Arsitektur Bypass Deployment
+```mermaid
+graph TD
+    A[Komputer Lokal] -->|git push| B[GitHub Repository satujalan-web]
+    B --> C{Trigger Vercel Auto-Deploy}
+    C -->|Gagal: Terdeteksi Submodule| D[Deploy Diabaikan/Terhenti]
+    A -->|Vercel CLI| E[Bypass Link Manual]
+    E -->|vercel --prod| F[Server Vercel 'sj-image-studio']
+    D -.->|Digantikan oleh| F
+    F --> G[Website Live Terupdate]
+```
+
+**Penjelasan Arsitektur & Perbaikan Teknis yang Dilakukan:**
 - **Resolusi Git Submodule (Gitlink):** Menghapus struktur `.git` mandiri di dalam folder `my-design-studio/frontend` yang sebelumnya menyebabkan Vercel gagal menarik (*pull*) data kode terbaru karena terdeteksi sebagai *submodule* kosong. Folder frontend kini diintegrasikan penuh ke dalam *root repository* `satujalan-web`.
 - **Force Direct Deploy Vercel CLI:** Meresolusi isu di mana *project* Vercel `sj-image-studio` mengabaikan *trigger* otomatis dari GitHub akibat riwayat *submodule* yang terputus. Deployment dilakukan paksa (override) menggunakan Vercel CLI secara manual sehingga kode lokal langsung masuk ke *Production*.
 - **Resolusi TypeScript Build:** Memperbaiki *type error* pada komponen `MagneticButton.tsx` (mengganti pewarisan tipe menjadi `HTMLMotionProps<"button">` dari `framer-motion`) agar proses kompilasi Next.js di *server production* berjalan mulus tanpa hambatan.

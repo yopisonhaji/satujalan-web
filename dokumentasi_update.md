@@ -133,6 +133,27 @@ graph TD
   - `tracking.html`
   - `tracking_en.html`
 - **Penyembunyian Panel Admin:** Menambahkan tag `robots` bernilai `noindex, nofollow` khusus pada `admin.html` agar tidak dapat di-crawl maupun muncul di pencarian publik demi keamanan akses (*Security Best Practice*).
+- **Perbaikan Resolusi Gambar WhatsApp (Open Graph):** Menghilangkan *prefix* `www.` pada atribut `og:image` dan `twitter:image` di seluruh halaman statis (`satujalan.id`). Hal ini memperbaiki *bug* di mana *crawler* WhatsApp gagal menampilkan gambar *preview* karena terhalang oleh sistem *redirect 308* dari URL `www` ke *non-www*.
+- **Injeksi SEO pada Aplikasi Next.js (Finance AI):** Mengimplementasikan ekspor metadata Google SEO & Open Graph di `app.satujalan.id` (`src/app/layout.tsx`), memastikan aplikasi Next.js (Vercel) otomatis memuat `Title`, `Description`, dan memanggil Logo HD secara dinamis sesuai identitas *tenant*.
+
+## 7. Penambahan Jasa Iklan Meta Ads (Landing Page)
+Menambahkan layanan unggulan baru berupa Jasa Iklan Meta (Facebook & Instagram Ads) di halaman depan untuk mendorong konversi *marketing* yang lebih agresif dengan penawaran *hard-selling*.
+
+### Flowchart Akuisisi Pelanggan Meta Ads
+```mermaid
+graph TD
+    A[Pengunjung Halaman Utama] --> B[Melihat Slide/Menu Meta Ads]
+    B --> C[Klik Tombol 'Konsultasi Sekarang']
+    C --> D[Diarahkan ke WhatsApp Admin]
+    D --> E[Diskusi Strategi & Target Market]
+    E --> F[Eksekusi Setup & Iklan Berjalan]
+    F --> G[Peningkatan Omset Bisnis Klien]
+```
+
+**Perbaikan Teknis yang Dilakukan:**
+- **Pembaruan Navigasi:** Menambahkan item *dropdown* spesifik untuk "Jasa Iklan Meta Ads" pada struktur *Navbar* (`index.html`).
+- **Hero Slider (Promo Slide):** Menambahkan *Slide* ke-4 khusus di korsel utama dengan gradasi estetis dan *copywriting* persuasif ("Tingkatkan Omset... Mulai Rp 300K").
+- **Penambahan Service Card:** Menyematkan kartu layanan baru khusus Meta Ads di *section* Solusi Cepat (`.services-grid`), lengkap dengan poin-poin fitur seperti Iklan Tertarget, Strategi Jitu, dan Laporan Transparan.
 
 > [!TIP]
-> **Status Akhir Pembaruan SEO:** Sudah dikomit dan di-*push* ke repositori GitHub. (Silakan lakukan langkah manual upload pada poin di bawah jika *hosting* Anda tidak terhubung otomatis dengan GitHub).
+> **Status Akhir Keseluruhan:** Seluruh kode pembaruan (Perbaikan OG Meta WhatsApp, SEO Next.js Finance App, dan Penambahan Jasa Meta Ads) **telah 100% selesai** dan di-push ke repositori GitHub. Pembaruan pada *hosting* manual (cPanel) menggunakan ZIP (*batch update*) telah diringkas untuk efisiensi deploy.

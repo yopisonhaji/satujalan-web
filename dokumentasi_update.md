@@ -83,12 +83,14 @@ graph TD
 - **Scroll UX:** Memperbaiki masalah *overflow* dan batas tinggi layar, memastikan seluruh tombol *Generate* dan *Copy JSON* tetap mudah diakses.
 
 ## 5. Perbaikan Integrasi Vercel & Koreksi Penamaan Menu
-Menyelesaikan masalah *build deployment* yang terhambat akibat miskonfigurasi struktur repositori Git.
+Menyelesaikan masalah *build deployment* yang terhambat akibat miskonfigurasi struktur repositori Git serta asinkronisasi terjemahan.
 
 **Perbaikan Teknis yang Dilakukan:**
 - **Resolusi Git Submodule (Gitlink):** Menghapus struktur `.git` mandiri di dalam folder `my-design-studio/frontend` yang sebelumnya menyebabkan Vercel gagal menarik (*pull*) data kode terbaru karena terdeteksi sebagai *submodule* kosong. Folder frontend kini diintegrasikan penuh ke dalam *root repository* `satujalan-web`.
+- **Force Direct Deploy Vercel CLI:** Meresolusi isu di mana *project* Vercel `sj-image-studio` mengabaikan *trigger* otomatis dari GitHub akibat riwayat *submodule* yang terputus. Deployment dilakukan paksa (override) menggunakan Vercel CLI secara manual sehingga kode lokal langsung masuk ke *Production*.
 - **Resolusi TypeScript Build:** Memperbaiki *type error* pada komponen `MagneticButton.tsx` (mengganti pewarisan tipe menjadi `HTMLMotionProps<"button">` dari `framer-motion`) agar proses kompilasi Next.js di *server production* berjalan mulus tanpa hambatan.
-- **Koreksi Copywriting Menu:** Merevisi teks navigasi *dropdown* Produk Kami pada halaman statis (`index.html`, `index_en.html`, `index_ar.html`) dari "SJ IMAGE" (atau "SJ Disen Design") menjadi **SJ Design** agar seragam dengan identitas baru aplikasi.
+- **Sinkronisasi Terjemahan (EN & AR):** Memperbaiki teks statis pada data terjemahan Bahasa Inggris (English) dan Bahasa Arab (Arabic) yang sebelumnya masih tertulis "Feeds" di Sidebar (misal: *Carousel Feeds*, *Design Feeds*). Semuanya kini tersinkronisasi menjadi **Carousel SJ**, **Design SJ**, dan **9 SJ Konsisten** mengikuti format Bahasa Indonesia.
+- **Koreksi Copywriting Menu Navbar:** Merevisi teks navigasi *dropdown* Produk Kami pada halaman statis (`index.html`, `index_en.html`, `index_ar.html`) dari "SJ IMAGE" (atau "SJ Disen Design") menjadi **SJ Design** agar seragam dengan identitas baru aplikasi.
 
 > [!TIP]
 > **Status Akhir:** Seluruh kode dari 5 rangkaian pembaruan besar di atas **telah 100% selesai di-deploy** dan berstatus *LIVE* di server Vercel/Cloudflare (berada di branch `main` repositori GitHub).
